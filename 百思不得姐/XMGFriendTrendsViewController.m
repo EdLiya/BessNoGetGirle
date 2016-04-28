@@ -14,6 +14,8 @@
 {
     [super viewDidLoad];
     
+    // 设置导航栏标题
+    self.navigationItem.title = @"我的关注";
 }
 
 @end
