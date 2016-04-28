@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "XMGTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,7 @@
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
     // 窗口跟控制器
-    self.window.rootViewController = [[UITabBarController alloc] init];
+    self.window.rootViewController = [[XMGTabBarController alloc] init];
     
     // 显示窗口
     [self.window makeKeyAndVisible];
