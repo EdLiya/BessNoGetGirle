@@ -12,6 +12,8 @@
 #import "XMGFriendTrendsViewController.h"
 #import "XMGMeViewController.h"
 #import "XMGTabBar.h"
+#import "XMGNavigationController.h"
+
 
 @implementation XMGTabBarController
 
@@ -56,9 +58,12 @@
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:image];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
-    vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
+    // 不能在这里设置背景色, 这里会去访问vc控制器的View,导致该控制器赖加载view,并且创建了
+//    vc.view.backgroundColor = XMGGlobalBg;
+    
     // 添加为子控制器
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [nav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
     [self addChildViewController:nav];
 }
 
