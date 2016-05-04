@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27B86F7DCCC5CED8994FD12F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB2C53BADCC6A307A8334335 /* libPods.a */; };
 		D707C5BD1CD1EB70009825E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D707C5BC1CD1EB70009825E2 /* Assets.xcassets */; };
 		D707C5CB1CD1EB71009825E2 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D707C5CA1CD1EB71009825E2 /* _____Tests.m */; };
 		D707C5D61CD1EB71009825E2 /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D707C5D51CD1EB71009825E2 /* _____UITests.m */; };
+		D72A81A21CD9C9690086DF3D /* XMGRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D72A81A01CD9C9690086DF3D /* XMGRecommendCategoryCell.m */; };
+		D72A81A31CD9C9690086DF3D /* XMGRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D72A81A11CD9C9690086DF3D /* XMGRecommendCategoryCell.xib */; };
+		D72A81A71CD9DFA00086DF3D /* XMGRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D72A81A51CD9DFA00086DF3D /* XMGRecommendUserCell.m */; };
+		D72A81A81CD9DFA00086DF3D /* XMGRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D72A81A61CD9DFA00086DF3D /* XMGRecommendUserCell.xib */; };
+		D72A81AB1CD9E31A0086DF3D /* XMGRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D72A81AA1CD9E31A0086DF3D /* XMGRecommendUser.m */; };
 		D73A15D31CD8B614008AAC70 /* XMGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A15AD1CD8B614008AAC70 /* XMGEssenceViewController.m */; };
 		D73A15D41CD8B614008AAC70 /* XMGFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A15B31CD8B614008AAC70 /* XMGFriendTrendsViewController.m */; };
 		D73A15D51CD8B614008AAC70 /* XMGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A15B91CD8B614008AAC70 /* XMGMeViewController.m */; };
@@ -22,6 +28,10 @@
 		D73A15DC1CD8B614008AAC70 /* XMGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A15D21CD8B614008AAC70 /* XMGTabBar.m */; };
 		D73A15DF1CD8CF76008AAC70 /* XMGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A15DE1CD8CF76008AAC70 /* XMGNavigationController.m */; };
 		D77954571CD9907F0054448C /* XMGFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D77954561CD9907F0054448C /* XMGFriendTrendsViewController.xib */; };
+		D779545B1CD99B600054448C /* XMGRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77954591CD99B600054448C /* XMGRecommendViewController.m */; };
+		D779545C1CD99B600054448C /* XMGRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D779545A1CD99B600054448C /* XMGRecommendViewController.xib */; };
+		D779545E1CD9A3BA0054448C /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = D779545D1CD9A3BA0054448C /* Foundation+Log.m */; };
+		D77954611CD9C69E0054448C /* XMGRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D77954601CD9C69E0054448C /* XMGRecommendCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34F922371FFD6F25BB65AC4F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		35D3B26DCCC4215EB7C027A3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D707C5AD1CD1EB70009825E2 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D707C5BC1CD1EB70009825E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D707C5C11CD1EB70009825E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +63,14 @@
 		D707C5D11CD1EB71009825E2 /* 百思不得姐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D707C5D51CD1EB71009825E2 /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
 		D707C5D71CD1EB71009825E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D72A819F1CD9C9690086DF3D /* XMGRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendCategoryCell.h; sourceTree = "<group>"; };
+		D72A81A01CD9C9690086DF3D /* XMGRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendCategoryCell.m; sourceTree = "<group>"; };
+		D72A81A11CD9C9690086DF3D /* XMGRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGRecommendCategoryCell.xib; sourceTree = "<group>"; };
+		D72A81A41CD9DFA00086DF3D /* XMGRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendUserCell.h; sourceTree = "<group>"; };
+		D72A81A51CD9DFA00086DF3D /* XMGRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendUserCell.m; sourceTree = "<group>"; };
+		D72A81A61CD9DFA00086DF3D /* XMGRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGRecommendUserCell.xib; sourceTree = "<group>"; };
+		D72A81A91CD9E31A0086DF3D /* XMGRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendUser.h; sourceTree = "<group>"; };
+		D72A81AA1CD9E31A0086DF3D /* XMGRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendUser.m; sourceTree = "<group>"; };
 		D73A15AC1CD8B614008AAC70 /* XMGEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGEssenceViewController.h; sourceTree = "<group>"; };
 		D73A15AD1CD8B614008AAC70 /* XMGEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGEssenceViewController.m; sourceTree = "<group>"; };
 		D73A15B21CD8B614008AAC70 /* XMGFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFriendTrendsViewController.h; sourceTree = "<group>"; };
@@ -74,6 +94,13 @@
 		D73A15DD1CD8CF76008AAC70 /* XMGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNavigationController.h; sourceTree = "<group>"; };
 		D73A15DE1CD8CF76008AAC70 /* XMGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGNavigationController.m; sourceTree = "<group>"; };
 		D77954561CD9907F0054448C /* XMGFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGFriendTrendsViewController.xib; sourceTree = "<group>"; };
+		D77954581CD99B600054448C /* XMGRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendViewController.h; sourceTree = "<group>"; };
+		D77954591CD99B600054448C /* XMGRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendViewController.m; sourceTree = "<group>"; };
+		D779545A1CD99B600054448C /* XMGRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGRecommendViewController.xib; sourceTree = "<group>"; };
+		D779545D1CD9A3BA0054448C /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		D779545F1CD9C69E0054448C /* XMGRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendCategory.h; sourceTree = "<group>"; };
+		D77954601CD9C69E0054448C /* XMGRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendCategory.m; sourceTree = "<group>"; };
+		DB2C53BADCC6A307A8334335 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B86F7DCCC5CED8994FD12F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +129,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BA72EC3BB3F3309553CE22F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35D3B26DCCC4215EB7C027A3 /* Pods.debug.xcconfig */,
+				34F922371FFD6F25BB65AC4F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9E2957E49B0EC15F47C20011 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C53BADCC6A307A8334335 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D707C5A41CD1EB70009825E2 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +153,8 @@
 				D707C5C91CD1EB71009825E2 /* 百思不得姐Tests */,
 				D707C5D41CD1EB71009825E2 /* 百思不得姐UITests */,
 				D707C5AE1CD1EB70009825E2 /* Products */,
+				3BA72EC3BB3F3309553CE22F /* Pods */,
+				9E2957E49B0EC15F47C20011 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,8 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				D73A15B11CD8B614008AAC70 /* Controller */,
-				D73A15B41CD8B614008AAC70 /* Model */,
 				D73A15B51CD8B614008AAC70 /* View */,
+				D73A15B41CD8B614008AAC70 /* Model */,
 			);
 			path = "FriendTrends-关注";
 			sourceTree = "<group>";
@@ -218,6 +265,9 @@
 				D73A15B21CD8B614008AAC70 /* XMGFriendTrendsViewController.h */,
 				D73A15B31CD8B614008AAC70 /* XMGFriendTrendsViewController.m */,
 				D77954561CD9907F0054448C /* XMGFriendTrendsViewController.xib */,
+				D77954581CD99B600054448C /* XMGRecommendViewController.h */,
+				D77954591CD99B600054448C /* XMGRecommendViewController.m */,
+				D779545A1CD99B600054448C /* XMGRecommendViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -225,6 +275,10 @@
 		D73A15B41CD8B614008AAC70 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D779545F1CD9C69E0054448C /* XMGRecommendCategory.h */,
+				D77954601CD9C69E0054448C /* XMGRecommendCategory.m */,
+				D72A81A91CD9E31A0086DF3D /* XMGRecommendUser.h */,
+				D72A81AA1CD9E31A0086DF3D /* XMGRecommendUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,6 +286,12 @@
 		D73A15B51CD8B614008AAC70 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D72A819F1CD9C9690086DF3D /* XMGRecommendCategoryCell.h */,
+				D72A81A01CD9C9690086DF3D /* XMGRecommendCategoryCell.m */,
+				D72A81A11CD9C9690086DF3D /* XMGRecommendCategoryCell.xib */,
+				D72A81A41CD9DFA00086DF3D /* XMGRecommendUserCell.h */,
+				D72A81A51CD9DFA00086DF3D /* XMGRecommendUserCell.m */,
+				D72A81A61CD9DFA00086DF3D /* XMGRecommendUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -311,6 +371,7 @@
 				D73A15D01CD8B614008AAC70 /* View */,
 				D73A15C31CD8B614008AAC70 /* AppDelegate.h */,
 				D73A15C41CD8B614008AAC70 /* AppDelegate.m */,
+				D779545D1CD9A3BA0054448C /* Foundation+Log.m */,
 				D73A15CD1CD8B614008AAC70 /* main.m */,
 				D73A15CF1CD8B614008AAC70 /* PrefixHeader.pch */,
 			);
@@ -362,9 +423,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D707C5DA1CD1EB71009825E2 /* Build configuration list for PBXNativeTarget "百思不得姐" */;
 			buildPhases = (
+				8B927DC227C552D82DB4779E /* Check Pods Manifest.lock */,
 				D707C5A91CD1EB70009825E2 /* Sources */,
 				D707C5AA1CD1EB70009825E2 /* Frameworks */,
 				D707C5AB1CD1EB70009825E2 /* Resources */,
+				FA85BB3CBFD6B010E5173E54 /* Embed Pods Frameworks */,
+				9501A9261AC4928090BE8767 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -459,7 +523,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D72A81A81CD9DFA00086DF3D /* XMGRecommendUserCell.xib in Resources */,
 				D707C5BD1CD1EB70009825E2 /* Assets.xcassets in Resources */,
+				D72A81A31CD9C9690086DF3D /* XMGRecommendCategoryCell.xib in Resources */,
+				D779545C1CD99B600054448C /* XMGRecommendViewController.xib in Resources */,
 				D77954571CD9907F0054448C /* XMGFriendTrendsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,20 +547,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8B927DC227C552D82DB4779E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9501A9261AC4928090BE8767 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA85BB3CBFD6B010E5173E54 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D707C5A91CD1EB70009825E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D72A81AB1CD9E31A0086DF3D /* XMGRecommendUser.m in Sources */,
 				D73A15DC1CD8B614008AAC70 /* XMGTabBar.m in Sources */,
+				D77954611CD9C69E0054448C /* XMGRecommendCategory.m in Sources */,
 				D73A15DF1CD8CF76008AAC70 /* XMGNavigationController.m in Sources */,
 				D73A15D51CD8B614008AAC70 /* XMGMeViewController.m in Sources */,
 				D73A15D31CD8B614008AAC70 /* XMGEssenceViewController.m in Sources */,
+				D72A81A21CD9C9690086DF3D /* XMGRecommendCategoryCell.m in Sources */,
+				D72A81A71CD9DFA00086DF3D /* XMGRecommendUserCell.m in Sources */,
+				D779545B1CD99B600054448C /* XMGRecommendViewController.m in Sources */,
 				D73A15D61CD8B614008AAC70 /* XMGNewViewController.m in Sources */,
 				D73A15D91CD8B614008AAC70 /* UIView+XMGExtension.m in Sources */,
 				D73A15DA1CD8B614008AAC70 /* XMGTabBarController.m in Sources */,
 				D73A15D41CD8B614008AAC70 /* XMGFriendTrendsViewController.m in Sources */,
 				D73A15D71CD8B614008AAC70 /* AppDelegate.m in Sources */,
+				D779545E1CD9A3BA0054448C /* Foundation+Log.m in Sources */,
 				D73A15DB1CD8B614008AAC70 /* main.m in Sources */,
 				D73A15D81CD8B614008AAC70 /* UIBarButtonItem+XMGExtension.m in Sources */,
 			);
@@ -617,6 +738,7 @@
 		};
 		D707C5DB1CD1EB71009825E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35D3B26DCCC4215EB7C027A3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -630,6 +752,7 @@
 		};
 		D707C5DC1CD1EB71009825E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34F922371FFD6F25BB65AC4F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
