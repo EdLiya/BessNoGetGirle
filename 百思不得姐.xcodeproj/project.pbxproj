@@ -21,6 +21,7 @@
 		D73A15DB1CD8B614008AAC70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A15CD1CD8B614008AAC70 /* main.m */; };
 		D73A15DC1CD8B614008AAC70 /* XMGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A15D21CD8B614008AAC70 /* XMGTabBar.m */; };
 		D73A15DF1CD8CF76008AAC70 /* XMGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A15DE1CD8CF76008AAC70 /* XMGNavigationController.m */; };
+		D77954571CD9907F0054448C /* XMGFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D77954561CD9907F0054448C /* XMGFriendTrendsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		D73A15D21CD8B614008AAC70 /* XMGTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTabBar.m; sourceTree = "<group>"; };
 		D73A15DD1CD8CF76008AAC70 /* XMGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNavigationController.h; sourceTree = "<group>"; };
 		D73A15DE1CD8CF76008AAC70 /* XMGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGNavigationController.m; sourceTree = "<group>"; };
+		D77954561CD9907F0054448C /* XMGFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGFriendTrendsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 			children = (
 				D73A15B21CD8B614008AAC70 /* XMGFriendTrendsViewController.h */,
 				D73A15B31CD8B614008AAC70 /* XMGFriendTrendsViewController.m */,
+				D77954561CD9907F0054448C /* XMGFriendTrendsViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D707C5BD1CD1EB70009825E2 /* Assets.xcassets in Resources */,
+				D77954571CD9907F0054448C /* XMGFriendTrendsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,10 +14,22 @@
 
 @implementation XMGNavigationController
 
+/**
+ * 当第一次使用这个类的时候会调用一次
+ */
++ (void)initialize
+{
+    // 当导航栏用在XMGNavigationController中, appearance设置才会生效
+    //    UINavigationBar *bar = [UINavigationBar appearanceWhenContainedIn:[self class], nil];
+    UINavigationBar *bar = [UINavigationBar appearance];
+    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+//    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
 }
 
 /**
@@ -34,7 +46,7 @@
         // 让按钮内部的所有内容左对齐
         button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
 //        [button sizeToFit];
-        // 让按钮的内容往左边偏移10
+//         让按钮的内容往左边偏移10
         button.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
