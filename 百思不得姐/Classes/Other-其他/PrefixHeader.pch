@@ -18,11 +18,13 @@
 
 // 日志输出
 #ifdef DEBUG
-#define XMGLog(...) NSLog(__VA_ARGS__)
-#define XMGLogFunc XMGLog(@"%s", __func__)
+#define XMGLog(...) NSLog(__VA_ARGS__);
+#define XMGLogFunc  NSLog(@"%s", __func__);
+#define ZSLog(...)  NSLog(__VA_ARGS__);
 #else
 #define XMGLog(...)
 #define XMGLogFunc
+#define ZSLog(...)
 #endif
 
 

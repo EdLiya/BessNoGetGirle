@@ -15,6 +15,10 @@
 @property (nonatomic, assign) NSInteger count;
 /** 名字 */
 @property (nonatomic, copy) NSString *name;
+/** 总数 */
+@property (nonatomic, assign) NSInteger total;
+/** 当前页码 */
+@property (nonatomic, assign) NSInteger currentPage;
 
 
 

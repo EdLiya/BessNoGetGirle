@@ -27,6 +27,10 @@
 		D73A15DB1CD8B614008AAC70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A15CD1CD8B614008AAC70 /* main.m */; };
 		D73A15DC1CD8B614008AAC70 /* XMGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A15D21CD8B614008AAC70 /* XMGTabBar.m */; };
 		D73A15DF1CD8CF76008AAC70 /* XMGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A15DE1CD8CF76008AAC70 /* XMGNavigationController.m */; };
+		D7723C411CDB5D4B0048344C /* XMGRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7723C401CDB5D4B0048344C /* XMGRecommendTagsViewController.m */; };
+		D7723C441CDB5F3C0048344C /* XMGRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = D7723C431CDB5F3C0048344C /* XMGRecommendTag.m */; };
+		D7723C481CDB613A0048344C /* XMGRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7723C461CDB613A0048344C /* XMGRecommendTagCell.m */; };
+		D7723C491CDB613A0048344C /* XMGRecommendTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7723C471CDB613A0048344C /* XMGRecommendTagCell.xib */; };
 		D77954571CD9907F0054448C /* XMGFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D77954561CD9907F0054448C /* XMGFriendTrendsViewController.xib */; };
 		D779545B1CD99B600054448C /* XMGRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77954591CD99B600054448C /* XMGRecommendViewController.m */; };
 		D779545C1CD99B600054448C /* XMGRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D779545A1CD99B600054448C /* XMGRecommendViewController.xib */; };
@@ -93,6 +97,13 @@
 		D73A15D21CD8B614008AAC70 /* XMGTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTabBar.m; sourceTree = "<group>"; };
 		D73A15DD1CD8CF76008AAC70 /* XMGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNavigationController.h; sourceTree = "<group>"; };
 		D73A15DE1CD8CF76008AAC70 /* XMGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGNavigationController.m; sourceTree = "<group>"; };
+		D7723C3F1CDB5D4B0048344C /* XMGRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTagsViewController.h; sourceTree = "<group>"; };
+		D7723C401CDB5D4B0048344C /* XMGRecommendTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendTagsViewController.m; sourceTree = "<group>"; };
+		D7723C421CDB5F3C0048344C /* XMGRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTag.h; sourceTree = "<group>"; };
+		D7723C431CDB5F3C0048344C /* XMGRecommendTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendTag.m; sourceTree = "<group>"; };
+		D7723C451CDB613A0048344C /* XMGRecommendTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTagCell.h; sourceTree = "<group>"; };
+		D7723C461CDB613A0048344C /* XMGRecommendTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendTagCell.m; sourceTree = "<group>"; };
+		D7723C471CDB613A0048344C /* XMGRecommendTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGRecommendTagCell.xib; sourceTree = "<group>"; };
 		D77954561CD9907F0054448C /* XMGFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGFriendTrendsViewController.xib; sourceTree = "<group>"; };
 		D77954581CD99B600054448C /* XMGRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendViewController.h; sourceTree = "<group>"; };
 		D77954591CD99B600054448C /* XMGRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendViewController.m; sourceTree = "<group>"; };
@@ -220,8 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				D73A15AB1CD8B614008AAC70 /* Controller */,
-				D73A15AE1CD8B614008AAC70 /* Model */,
 				D73A15AF1CD8B614008AAC70 /* View */,
+				D73A15AE1CD8B614008AAC70 /* Model */,
 			);
 			path = "Essence-精华";
 			sourceTree = "<group>";
@@ -231,6 +242,8 @@
 			children = (
 				D73A15AC1CD8B614008AAC70 /* XMGEssenceViewController.h */,
 				D73A15AD1CD8B614008AAC70 /* XMGEssenceViewController.m */,
+				D7723C3F1CDB5D4B0048344C /* XMGRecommendTagsViewController.h */,
+				D7723C401CDB5D4B0048344C /* XMGRecommendTagsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -238,6 +251,8 @@
 		D73A15AE1CD8B614008AAC70 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D7723C421CDB5F3C0048344C /* XMGRecommendTag.h */,
+				D7723C431CDB5F3C0048344C /* XMGRecommendTag.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +260,9 @@
 		D73A15AF1CD8B614008AAC70 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D7723C451CDB613A0048344C /* XMGRecommendTagCell.h */,
+				D7723C461CDB613A0048344C /* XMGRecommendTagCell.m */,
+				D7723C471CDB613A0048344C /* XMGRecommendTagCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -525,6 +543,7 @@
 			files = (
 				D72A81A81CD9DFA00086DF3D /* XMGRecommendUserCell.xib in Resources */,
 				D707C5BD1CD1EB70009825E2 /* Assets.xcassets in Resources */,
+				D7723C491CDB613A0048344C /* XMGRecommendTagCell.xib in Resources */,
 				D72A81A31CD9C9690086DF3D /* XMGRecommendCategoryCell.xib in Resources */,
 				D779545C1CD99B600054448C /* XMGRecommendViewController.xib in Resources */,
 				D77954571CD9907F0054448C /* XMGFriendTrendsViewController.xib in Resources */,
@@ -602,11 +621,14 @@
 			files = (
 				D72A81AB1CD9E31A0086DF3D /* XMGRecommendUser.m in Sources */,
 				D73A15DC1CD8B614008AAC70 /* XMGTabBar.m in Sources */,
+				D7723C411CDB5D4B0048344C /* XMGRecommendTagsViewController.m in Sources */,
 				D77954611CD9C69E0054448C /* XMGRecommendCategory.m in Sources */,
 				D73A15DF1CD8CF76008AAC70 /* XMGNavigationController.m in Sources */,
 				D73A15D51CD8B614008AAC70 /* XMGMeViewController.m in Sources */,
+				D7723C481CDB613A0048344C /* XMGRecommendTagCell.m in Sources */,
 				D73A15D31CD8B614008AAC70 /* XMGEssenceViewController.m in Sources */,
 				D72A81A21CD9C9690086DF3D /* XMGRecommendCategoryCell.m in Sources */,
+				D7723C441CDB5F3C0048344C /* XMGRecommendTag.m in Sources */,
 				D72A81A71CD9DFA00086DF3D /* XMGRecommendUserCell.m in Sources */,
 				D779545B1CD99B600054448C /* XMGRecommendViewController.m in Sources */,
 				D73A15D61CD8B614008AAC70 /* XMGNewViewController.m in Sources */,
