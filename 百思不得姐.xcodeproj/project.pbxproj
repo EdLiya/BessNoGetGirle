@@ -36,6 +36,8 @@
 		D779545C1CD99B600054448C /* XMGRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D779545A1CD99B600054448C /* XMGRecommendViewController.xib */; };
 		D779545E1CD9A3BA0054448C /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = D779545D1CD9A3BA0054448C /* Foundation+Log.m */; };
 		D77954611CD9C69E0054448C /* XMGRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D77954601CD9C69E0054448C /* XMGRecommendCategory.m */; };
+		D77F423A1CE05FF7003F5F50 /* XMGLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77F42381CE05FF7003F5F50 /* XMGLoginRegisterViewController.m */; };
+		D77F423B1CE05FF7003F5F50 /* XMGLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D77F42391CE05FF7003F5F50 /* XMGLoginRegisterViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,9 @@
 		D779545D1CD9A3BA0054448C /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		D779545F1CD9C69E0054448C /* XMGRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendCategory.h; sourceTree = "<group>"; };
 		D77954601CD9C69E0054448C /* XMGRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendCategory.m; sourceTree = "<group>"; };
+		D77F42371CE05FF7003F5F50 /* XMGLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGLoginRegisterViewController.h; sourceTree = "<group>"; };
+		D77F42381CE05FF7003F5F50 /* XMGLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGLoginRegisterViewController.m; sourceTree = "<group>"; };
+		D77F42391CE05FF7003F5F50 /* XMGLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGLoginRegisterViewController.xib; sourceTree = "<group>"; };
 		DB2C53BADCC6A307A8334335 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -286,6 +291,9 @@
 				D77954581CD99B600054448C /* XMGRecommendViewController.h */,
 				D77954591CD99B600054448C /* XMGRecommendViewController.m */,
 				D779545A1CD99B600054448C /* XMGRecommendViewController.xib */,
+				D77F42371CE05FF7003F5F50 /* XMGLoginRegisterViewController.h */,
+				D77F42381CE05FF7003F5F50 /* XMGLoginRegisterViewController.m */,
+				D77F42391CE05FF7003F5F50 /* XMGLoginRegisterViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -545,6 +553,7 @@
 				D707C5BD1CD1EB70009825E2 /* Assets.xcassets in Resources */,
 				D7723C491CDB613A0048344C /* XMGRecommendTagCell.xib in Resources */,
 				D72A81A31CD9C9690086DF3D /* XMGRecommendCategoryCell.xib in Resources */,
+				D77F423B1CE05FF7003F5F50 /* XMGLoginRegisterViewController.xib in Resources */,
 				D779545C1CD99B600054448C /* XMGRecommendViewController.xib in Resources */,
 				D77954571CD9907F0054448C /* XMGFriendTrendsViewController.xib in Resources */,
 			);
@@ -625,6 +634,7 @@
 				D77954611CD9C69E0054448C /* XMGRecommendCategory.m in Sources */,
 				D73A15DF1CD8CF76008AAC70 /* XMGNavigationController.m in Sources */,
 				D73A15D51CD8B614008AAC70 /* XMGMeViewController.m in Sources */,
+				D77F423A1CE05FF7003F5F50 /* XMGLoginRegisterViewController.m in Sources */,
 				D7723C481CDB613A0048344C /* XMGRecommendTagCell.m in Sources */,
 				D73A15D31CD8B614008AAC70 /* XMGEssenceViewController.m in Sources */,
 				D72A81A21CD9C9690086DF3D /* XMGRecommendCategoryCell.m in Sources */,

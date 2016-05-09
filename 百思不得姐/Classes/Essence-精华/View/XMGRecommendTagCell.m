@@ -44,10 +44,12 @@
     self.subNumberLabel.text = subNumber;
 }
 
+// 重写该方法,以 拦截 frame 设置
 - (void)setFrame:(CGRect)frame {
     
-    frame.origin.x = 10;
+    frame.origin.x = 5; // 缩进
     frame.size.width -= 2 * frame.origin.x;
+    frame.size.height -= 1;
     // 这里修改frame,然后交给父类,交给内部成员变量_frame,赋值起来
     [super setFrame:frame];
     
