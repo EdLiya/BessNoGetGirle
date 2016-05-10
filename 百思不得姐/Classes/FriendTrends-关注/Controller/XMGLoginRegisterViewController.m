@@ -9,7 +9,7 @@
 #import "XMGLoginRegisterViewController.h"
 
 @interface XMGLoginRegisterViewController ()
-
+@property (weak, nonatomic) IBOutlet UIImageView *bgView;
 @end
 
 @implementation XMGLoginRegisterViewController
