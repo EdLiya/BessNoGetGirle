@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "XMGTabBarController.h"
+#import "XMGPushGuideView.h"
 
 @interface AppDelegate ()
 
@@ -26,6 +27,10 @@
     // 显示窗口
     [self.window makeKeyAndVisible];
     
+    XMGPushGuideView *guideView = [XMGPushGuideView guideView];
+    guideView.bounds = self.window.bounds;
+    
+    [self.window addSubview:guideView]; 
     
     return YES;
 }

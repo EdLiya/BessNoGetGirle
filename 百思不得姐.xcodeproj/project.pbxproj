@@ -38,6 +38,10 @@
 		D77954611CD9C69E0054448C /* XMGRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D77954601CD9C69E0054448C /* XMGRecommendCategory.m */; };
 		D77F423A1CE05FF7003F5F50 /* XMGLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77F42381CE05FF7003F5F50 /* XMGLoginRegisterViewController.m */; };
 		D77F423B1CE05FF7003F5F50 /* XMGLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D77F42391CE05FF7003F5F50 /* XMGLoginRegisterViewController.xib */; };
+		D7E6C3271CE30DF000A6E200 /* XMGVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E6C3261CE30DF000A6E200 /* XMGVerticalButton.m */; };
+		D7E6C32A1CE3208200A6E200 /* XMGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E6C3291CE3208200A6E200 /* XMGTextField.m */; };
+		D7E6C32D1CE34CC600A6E200 /* XMGPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E6C32C1CE34CC600A6E200 /* XMGPushGuideView.m */; };
+		D7E6C32F1CE34CE100A6E200 /* XMGPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7E6C32E1CE34CE100A6E200 /* XMGPushGuideView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +120,13 @@
 		D77F42371CE05FF7003F5F50 /* XMGLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGLoginRegisterViewController.h; sourceTree = "<group>"; };
 		D77F42381CE05FF7003F5F50 /* XMGLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGLoginRegisterViewController.m; sourceTree = "<group>"; };
 		D77F42391CE05FF7003F5F50 /* XMGLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		D7E6C3251CE30DF000A6E200 /* XMGVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGVerticalButton.h; sourceTree = "<group>"; };
+		D7E6C3261CE30DF000A6E200 /* XMGVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGVerticalButton.m; sourceTree = "<group>"; };
+		D7E6C3281CE3208200A6E200 /* XMGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTextField.h; sourceTree = "<group>"; };
+		D7E6C3291CE3208200A6E200 /* XMGTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTextField.m; sourceTree = "<group>"; };
+		D7E6C32B1CE34CC600A6E200 /* XMGPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPushGuideView.h; sourceTree = "<group>"; };
+		D7E6C32C1CE34CC600A6E200 /* XMGPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPushGuideView.m; sourceTree = "<group>"; };
+		D7E6C32E1CE34CE100A6E200 /* XMGPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGPushGuideView.xib; sourceTree = "<group>"; };
 		DB2C53BADCC6A307A8334335 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -318,6 +329,10 @@
 				D72A81A41CD9DFA00086DF3D /* XMGRecommendUserCell.h */,
 				D72A81A51CD9DFA00086DF3D /* XMGRecommendUserCell.m */,
 				D72A81A61CD9DFA00086DF3D /* XMGRecommendUserCell.xib */,
+				D7E6C3251CE30DF000A6E200 /* XMGVerticalButton.h */,
+				D7E6C3261CE30DF000A6E200 /* XMGVerticalButton.m */,
+				D7E6C3281CE3208200A6E200 /* XMGTextField.h */,
+				D7E6C3291CE3208200A6E200 /* XMGTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -438,6 +453,9 @@
 			children = (
 				D73A15D11CD8B614008AAC70 /* XMGTabBar.h */,
 				D73A15D21CD8B614008AAC70 /* XMGTabBar.m */,
+				D7E6C32B1CE34CC600A6E200 /* XMGPushGuideView.h */,
+				D7E6C32C1CE34CC600A6E200 /* XMGPushGuideView.m */,
+				D7E6C32E1CE34CE100A6E200 /* XMGPushGuideView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -551,6 +569,7 @@
 			files = (
 				D72A81A81CD9DFA00086DF3D /* XMGRecommendUserCell.xib in Resources */,
 				D707C5BD1CD1EB70009825E2 /* Assets.xcassets in Resources */,
+				D7E6C32F1CE34CE100A6E200 /* XMGPushGuideView.xib in Resources */,
 				D7723C491CDB613A0048344C /* XMGRecommendTagCell.xib in Resources */,
 				D72A81A31CD9C9690086DF3D /* XMGRecommendCategoryCell.xib in Resources */,
 				D77F423B1CE05FF7003F5F50 /* XMGLoginRegisterViewController.xib in Resources */,
@@ -629,6 +648,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D72A81AB1CD9E31A0086DF3D /* XMGRecommendUser.m in Sources */,
+				D7E6C32A1CE3208200A6E200 /* XMGTextField.m in Sources */,
 				D73A15DC1CD8B614008AAC70 /* XMGTabBar.m in Sources */,
 				D7723C411CDB5D4B0048344C /* XMGRecommendTagsViewController.m in Sources */,
 				D77954611CD9C69E0054448C /* XMGRecommendCategory.m in Sources */,
@@ -637,9 +657,11 @@
 				D77F423A1CE05FF7003F5F50 /* XMGLoginRegisterViewController.m in Sources */,
 				D7723C481CDB613A0048344C /* XMGRecommendTagCell.m in Sources */,
 				D73A15D31CD8B614008AAC70 /* XMGEssenceViewController.m in Sources */,
+				D7E6C32D1CE34CC600A6E200 /* XMGPushGuideView.m in Sources */,
 				D72A81A21CD9C9690086DF3D /* XMGRecommendCategoryCell.m in Sources */,
 				D7723C441CDB5F3C0048344C /* XMGRecommendTag.m in Sources */,
 				D72A81A71CD9DFA00086DF3D /* XMGRecommendUserCell.m in Sources */,
+				D7E6C3271CE30DF000A6E200 /* XMGVerticalButton.m in Sources */,
 				D779545B1CD99B600054448C /* XMGRecommendViewController.m in Sources */,
 				D73A15D61CD8B614008AAC70 /* XMGNewViewController.m in Sources */,
 				D73A15D91CD8B614008AAC70 /* UIView+XMGExtension.m in Sources */,
