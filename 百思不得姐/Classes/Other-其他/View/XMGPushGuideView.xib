@@ -10,8 +10,56 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XMGPushGuideView">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.89543269230769229" colorSpace="calibratedRGB"/>
-            <point key="canvasLocation" x="357" y="279"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushguidemid" translatesAutoresizingMaskIntoConstraints="NO" id="k46-1M-PsE">
+                    <rect key="frame" x="180" y="238" width="240" height="125"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="125" id="0g9-D0-LzC"/>
+                        <constraint firstAttribute="width" constant="240" id="zCu-fP-URx"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushguidetop" translatesAutoresizingMaskIntoConstraints="NO" id="zHD-W9-YMj">
+                    <rect key="frame" x="175" y="143" width="250" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="23f-RI-HRe"/>
+                        <constraint firstAttribute="width" constant="250" id="XbZ-0D-bDQ"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushguidebot" translatesAutoresizingMaskIntoConstraints="NO" id="jcf-es-nQE">
+                    <rect key="frame" x="235" y="368" width="130" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="az9-zN-vWO"/>
+                        <constraint firstAttribute="width" constant="130" id="lAU-bB-n9d"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkR-sc-UXR">
+                    <rect key="frame" x="235" y="416" width="104" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="104" id="JXg-Ed-IIe"/>
+                        <constraint firstAttribute="height" constant="42" id="tRF-Ja-ygi"/>
+                    </constraints>
+                    <connections>
+                        <action selector="close" destination="iN0-l3-epB" eventType="touchUpInside" id="YmF-wU-FLA"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.11900408434650456" green="0.11925341945288752" blue="0.11756743920972644" alpha="0.64009615384615381" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="jcf-es-nQE" firstAttribute="top" secondItem="k46-1M-PsE" secondAttribute="bottom" constant="5" id="0LW-NB-cbh"/>
+                <constraint firstItem="dkR-sc-UXR" firstAttribute="bottom" secondItem="jcf-es-nQE" secondAttribute="bottom" id="1LY-VX-oxq"/>
+                <constraint firstItem="k46-1M-PsE" firstAttribute="top" secondItem="zHD-W9-YMj" secondAttribute="bottom" constant="40" id="5VF-9e-LP5"/>
+                <constraint firstItem="k46-1M-PsE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="D3x-iL-vKq"/>
+                <constraint firstItem="dkR-sc-UXR" firstAttribute="leading" secondItem="jcf-es-nQE" secondAttribute="leading" id="KNu-A1-O4j"/>
+                <constraint firstItem="jcf-es-nQE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="PfQ-Vi-nPB"/>
+                <constraint firstItem="k46-1M-PsE" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="oOh-Hn-Hgy"/>
+                <constraint firstItem="zHD-W9-YMj" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tgr-l6-2hx"/>
+            </constraints>
+            <point key="canvasLocation" x="361" y="277"/>
         </view>
     </objects>
+    <resources>
+        <image name="pushguidebot" width="130" height="90"/>
+        <image name="pushguidemid" width="240" height="125"/>
+        <image name="pushguidetop" width="250" height="55"/>
+    </resources>
 </document>

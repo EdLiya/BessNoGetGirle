@@ -11,6 +11,11 @@
 		D707C5BD1CD1EB70009825E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D707C5BC1CD1EB70009825E2 /* Assets.xcassets */; };
 		D707C5CB1CD1EB71009825E2 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D707C5CA1CD1EB71009825E2 /* _____Tests.m */; };
 		D707C5D61CD1EB71009825E2 /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D707C5D51CD1EB71009825E2 /* _____UITests.m */; };
+		D71DC2B41CE4560F007D3005 /* XMGAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71DC2AB1CE4560F007D3005 /* XMGAllViewController.m */; };
+		D71DC2B51CE4560F007D3005 /* XMGVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71DC2AD1CE4560F007D3005 /* XMGVideoViewController.m */; };
+		D71DC2B61CE4560F007D3005 /* XMGVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71DC2AF1CE4560F007D3005 /* XMGVoiceViewController.m */; };
+		D71DC2B71CE4560F007D3005 /* XMGPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71DC2B11CE4560F007D3005 /* XMGPictureViewController.m */; };
+		D71DC2B81CE4560F007D3005 /* XMGWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71DC2B31CE4560F007D3005 /* XMGWordViewController.m */; };
 		D72A81A21CD9C9690086DF3D /* XMGRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D72A81A01CD9C9690086DF3D /* XMGRecommendCategoryCell.m */; };
 		D72A81A31CD9C9690086DF3D /* XMGRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D72A81A11CD9C9690086DF3D /* XMGRecommendCategoryCell.xib */; };
 		D72A81A71CD9DFA00086DF3D /* XMGRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D72A81A51CD9DFA00086DF3D /* XMGRecommendUserCell.m */; };
@@ -73,6 +78,16 @@
 		D707C5D11CD1EB71009825E2 /* 百思不得姐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D707C5D51CD1EB71009825E2 /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
 		D707C5D71CD1EB71009825E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D71DC2AA1CE4560F007D3005 /* XMGAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGAllViewController.h; sourceTree = "<group>"; };
+		D71DC2AB1CE4560F007D3005 /* XMGAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGAllViewController.m; sourceTree = "<group>"; };
+		D71DC2AC1CE4560F007D3005 /* XMGVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGVideoViewController.h; sourceTree = "<group>"; };
+		D71DC2AD1CE4560F007D3005 /* XMGVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGVideoViewController.m; sourceTree = "<group>"; };
+		D71DC2AE1CE4560F007D3005 /* XMGVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGVoiceViewController.h; sourceTree = "<group>"; };
+		D71DC2AF1CE4560F007D3005 /* XMGVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGVoiceViewController.m; sourceTree = "<group>"; };
+		D71DC2B01CE4560F007D3005 /* XMGPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPictureViewController.h; sourceTree = "<group>"; };
+		D71DC2B11CE4560F007D3005 /* XMGPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPictureViewController.m; sourceTree = "<group>"; };
+		D71DC2B21CE4560F007D3005 /* XMGWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGWordViewController.h; sourceTree = "<group>"; };
+		D71DC2B31CE4560F007D3005 /* XMGWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGWordViewController.m; sourceTree = "<group>"; };
 		D72A819F1CD9C9690086DF3D /* XMGRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendCategoryCell.h; sourceTree = "<group>"; };
 		D72A81A01CD9C9690086DF3D /* XMGRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendCategoryCell.m; sourceTree = "<group>"; };
 		D72A81A11CD9C9690086DF3D /* XMGRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGRecommendCategoryCell.xib; sourceTree = "<group>"; };
@@ -260,6 +275,16 @@
 				D73A15AD1CD8B614008AAC70 /* XMGEssenceViewController.m */,
 				D7723C3F1CDB5D4B0048344C /* XMGRecommendTagsViewController.h */,
 				D7723C401CDB5D4B0048344C /* XMGRecommendTagsViewController.m */,
+				D71DC2AA1CE4560F007D3005 /* XMGAllViewController.h */,
+				D71DC2AB1CE4560F007D3005 /* XMGAllViewController.m */,
+				D71DC2AC1CE4560F007D3005 /* XMGVideoViewController.h */,
+				D71DC2AD1CE4560F007D3005 /* XMGVideoViewController.m */,
+				D71DC2AE1CE4560F007D3005 /* XMGVoiceViewController.h */,
+				D71DC2AF1CE4560F007D3005 /* XMGVoiceViewController.m */,
+				D71DC2B01CE4560F007D3005 /* XMGPictureViewController.h */,
+				D71DC2B11CE4560F007D3005 /* XMGPictureViewController.m */,
+				D71DC2B21CE4560F007D3005 /* XMGWordViewController.h */,
+				D71DC2B31CE4560F007D3005 /* XMGWordViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -657,14 +682,19 @@
 				D77F423A1CE05FF7003F5F50 /* XMGLoginRegisterViewController.m in Sources */,
 				D7723C481CDB613A0048344C /* XMGRecommendTagCell.m in Sources */,
 				D73A15D31CD8B614008AAC70 /* XMGEssenceViewController.m in Sources */,
+				D71DC2B41CE4560F007D3005 /* XMGAllViewController.m in Sources */,
 				D7E6C32D1CE34CC600A6E200 /* XMGPushGuideView.m in Sources */,
+				D71DC2B71CE4560F007D3005 /* XMGPictureViewController.m in Sources */,
 				D72A81A21CD9C9690086DF3D /* XMGRecommendCategoryCell.m in Sources */,
 				D7723C441CDB5F3C0048344C /* XMGRecommendTag.m in Sources */,
 				D72A81A71CD9DFA00086DF3D /* XMGRecommendUserCell.m in Sources */,
 				D7E6C3271CE30DF000A6E200 /* XMGVerticalButton.m in Sources */,
 				D779545B1CD99B600054448C /* XMGRecommendViewController.m in Sources */,
+				D71DC2B51CE4560F007D3005 /* XMGVideoViewController.m in Sources */,
+				D71DC2B81CE4560F007D3005 /* XMGWordViewController.m in Sources */,
 				D73A15D61CD8B614008AAC70 /* XMGNewViewController.m in Sources */,
 				D73A15D91CD8B614008AAC70 /* UIView+XMGExtension.m in Sources */,
+				D71DC2B61CE4560F007D3005 /* XMGVoiceViewController.m in Sources */,
 				D73A15DA1CD8B614008AAC70 /* XMGTabBarController.m in Sources */,
 				D73A15D41CD8B614008AAC70 /* XMGFriendTrendsViewController.m in Sources */,
 				D73A15D71CD8B614008AAC70 /* AppDelegate.m in Sources */,

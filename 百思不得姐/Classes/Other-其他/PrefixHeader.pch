@@ -21,12 +21,13 @@
 #define XMGLog(...) NSLog(__VA_ARGS__);
 #define XMGLogFunc  NSLog(@"%s", __func__);
 #define ZSLog(...)  NSLog(__VA_ARGS__);
+#define DELog(format,...) NSLog((@"[%s] [%d]" format), __FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else
 #define XMGLog(...)
 #define XMGLogFunc
 #define ZSLog(...)
+#define DELog(...)
 #endif
-
 
 // 颜色管理
 #define XMGRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]

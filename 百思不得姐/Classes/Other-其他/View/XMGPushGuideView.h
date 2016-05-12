@@ -10,4 +10,6 @@
 
 @interface XMGPushGuideView : UIView
 + (instancetype)guideView;
+
++ (void)show;
 @end

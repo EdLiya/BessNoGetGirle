@@ -27,11 +27,10 @@
     // 显示窗口
     [self.window makeKeyAndVisible];
     
-    XMGPushGuideView *guideView = [XMGPushGuideView guideView];
-    guideView.bounds = self.window.bounds;
+    // 显示推送引导
+    [XMGPushGuideView show];
     
-    [self.window addSubview:guideView]; 
-    
+
     return YES;
 }
 
