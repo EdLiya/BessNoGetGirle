@@ -24,6 +24,24 @@
     
     // 设置背景色
     self.view.backgroundColor = XMGGlobalBg;
+    
+    
+    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftBtn.backgroundColor = ZSRandomColor;
+    [leftBtn setTitle:@"返回" forState:UIControlStateNormal];
+    [leftBtn setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];
+    [leftBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [leftBtn sizeToFit];
+    // 对齐
+    leftBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    leftBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    [leftBtn addTarget:self action:@selector(moonClick) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *closeItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStylePlain target:self action:@selector(moonClick)];
+    
+    
+    self.navigationItem.leftBarButtonItems = @[backItem,closeItem];
+    
 }
 
 
