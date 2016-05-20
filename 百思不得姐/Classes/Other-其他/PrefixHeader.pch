@@ -15,6 +15,7 @@
 #import "UIView+XMGExtension.h"
 #import "UIBarButtonItem+XMGExtension.h"
 #import "XMGConst.h"
+#import "NSDate+XMGExtension.h"
 #endif
 
 // 日志输出
