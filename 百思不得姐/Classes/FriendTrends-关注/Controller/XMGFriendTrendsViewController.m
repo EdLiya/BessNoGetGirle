@@ -31,6 +31,9 @@
     XMGLogFunc;
     XMGRecommendViewController *vc = [[XMGRecommendViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+    DELog(@"%@",vc);
+    ZSLog(@"%@ ",vc);
+    NSLog(@"%@",vc);
 }
 
 

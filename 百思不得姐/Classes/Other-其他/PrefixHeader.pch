@@ -23,7 +23,8 @@
 #define XMGLog(...) NSLog(__VA_ARGS__);
 #define XMGLogFunc  NSLog(@"%s", __func__);
 #define ZSLog(...)  NSLog(__VA_ARGS__);
-#define DELog(format,...) NSLog((@"[%s] [%d]" format), __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#define DELog(format,...) NSLog((@"%s [line:%d]" format), __FUNCTION__, __LINE__, ##__VA_ARGS__);
+
 #else
 #define XMGLog(...)
 #define XMGLogFunc
