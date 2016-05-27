@@ -7,12 +7,8 @@
 //
 
 #import "XMGEssenceViewController.h"
+#import "XMGTopicViewController.h"
 #import "XMGRecommendTagsViewController.h"
-#import "XMGAllViewController.h"
-#import "XMGVideoViewController.h"
-#import "XMGVoiceViewController.h"
-#import "XMGPictureViewController.h"
-#import "XMGWordViewController.h"
 
 @interface XMGEssenceViewController () <UIScrollViewDelegate>
 /** 标签栏底部的红色指示器 */
@@ -46,24 +42,29 @@
  */
 - (void)setupChildVces
 {
-    XMGWordViewController *word = [[XMGWordViewController alloc] init];
+    XMGTopicViewController *word = [[XMGTopicViewController alloc] init];
     word.title = @"段子";
+    word.type = XMGTopicTypeWord;
     [self addChildViewController:word];
     
-    XMGAllViewController *all = [[XMGAllViewController alloc] init];
+    XMGTopicViewController *all = [[XMGTopicViewController alloc] init];
     all.title = @"全部";
+    all.type = XMGTopicTypeAll;
     [self addChildViewController:all];
     
-    XMGPictureViewController *picture = [[XMGPictureViewController alloc] init];
+    XMGTopicViewController *picture = [[XMGTopicViewController alloc] init];
     picture.title = @"图片";
+    picture.type = XMGTopicTypePicture;
     [self addChildViewController:picture];
     
-    XMGVideoViewController *video = [[XMGVideoViewController alloc] init];
+    XMGTopicViewController *video = [[XMGTopicViewController alloc] init];
     video.title = @"视频";
+    video.type = XMGTopicTypeVideo;
     [self addChildViewController:video];
     
-    XMGVoiceViewController *voice = [[XMGVoiceViewController alloc] init];
+    XMGTopicViewController *voice = [[XMGTopicViewController alloc] init];
     voice.title = @"声音";
+    voice.type = XMGTopicTypeVoice;
     [self addChildViewController:voice];
     
 }

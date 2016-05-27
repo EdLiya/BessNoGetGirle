@@ -73,8 +73,8 @@
     NSDateComponents *cmps = [calendar components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:selfDate toDate:nowDate options:0];
     
     return cmps.year == 0
-    && cmps.month == 0
-    && cmps.day == 1;
+        && cmps.month == 0
+        && cmps.day == 1;
 }
 
 @end

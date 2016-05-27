@@ -17,6 +17,7 @@
 #import <MJRefresh.h>
 
 
+
 #define XMGSelectedCategory self.categories[self.categoryTableView.indexPathForSelectedRow.row]
 
 @interface XMGRecommendViewController () <UITableViewDataSource, UITableViewDelegate>

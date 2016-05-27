@@ -9,22 +9,21 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
-#ifdef __OBJC__
+#ifdef __OBJC__ // 控制只引入到.m文件中
+
 #import "UIView+XMGExtension.h"
 #import "UIBarButtonItem+XMGExtension.h"
 #import "XMGConst.h"
 #import "NSDate+XMGExtension.h"
-#endif
 
-// 日志输出
+
+
+// ---------------------------------------------------------------------------------------------- 日志输出
 #ifdef DEBUG
 #define XMGLog(...) NSLog(__VA_ARGS__);
 #define XMGLogFunc  NSLog(@"%s", __func__);
 #define ZSLog(...)  NSLog(__VA_ARGS__);
 #define DELog(format,...) NSLog((@"%s [line:%d]" format), __FUNCTION__, __LINE__, ##__VA_ARGS__);
-
 #else
 #define XMGLog(...)
 #define XMGLogFunc
@@ -32,20 +31,22 @@
 #define DELog(...)
 #endif
 
-#define WEAKSELF __block typeof(self) __weak weakSelf = self;
 
-// 颜色管理
+// ---------------------------------------------------------------------------------------------- 颜色管理
+
 #define XMGRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 #define XMGGlobalBg XMGRGBColor(223, 223, 223)
 /** 随机色*/
 #define ZSRandomColor  XMGRGBColor(arc4random_uniform(256),arc4random_uniform(256),arc4random_uniform(256))
 
 
+// ---------------------------------------------------------------------------------------------- 代码宏
+#define WEAKSELF __block typeof(self) __weak weakSelf = self;
 
 
 
 
 
 
-
+#endif
 #endif /* PrefixHeader_pch */
