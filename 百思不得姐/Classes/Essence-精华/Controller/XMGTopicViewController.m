@@ -151,6 +151,16 @@ static NSString * const XMGTopicCellId = @"topic";
     return cell;
 }
 
+#pragma mark - 代理方法
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 取出帖子模型
+    XMGTopic *topic = self.topics[indexPath.row];
+    
+    // 返回这个模型对应的cell高度
+    return topic.cellHeight;
+}
+
 #pragma mark - lazy getter
 - (NSMutableArray *)topics {
     if (nil == _topics) {
@@ -158,22 +168,4 @@ static NSString * const XMGTopicCellId = @"topic";
     }
     return _topics;
 }
-
-#pragma mark - 代理方法
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // 取出帖子模型
-    XMGTopic *topic = self.topics[indexPath.row];
-    
-    // 文字的最大尺寸
-    CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * XMGTopicCellMargin, MAXFLOAT);
-    //    CGFloat textH = [topic.text sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:maxSize].height;
-    CGFloat textH = [topic.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
-    
-    // cell的高度
-    CGFloat cellH = XMGTopicCellTextY + textH + XMGTopicCellBottomBarH + 2 * XMGTopicCellMargin;
-    
-    return cellH;
-}
-
 @end

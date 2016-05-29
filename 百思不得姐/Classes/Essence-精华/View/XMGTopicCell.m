@@ -99,12 +99,10 @@
 
 - (void)setFrame:(CGRect)frame {
     
-    static CGFloat const margin = 10;
-    
-    frame.origin.x = margin;
-    frame.size.width -= 2 * margin;
-    frame.size.height -= margin;
-    frame.origin.y += 10; // 整体下移10点
+    frame.origin.x = XMGTopicCellMargin;
+    frame.size.width -= 2 * XMGTopicCellMargin;
+    frame.size.height -= XMGTopicCellMargin;
+    frame.origin.y += XMGTopicCellMargin; // 整体下移10点
     [super setFrame:frame];
 }
 @end
