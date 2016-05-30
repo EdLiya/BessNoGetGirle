@@ -8,13 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, XMGTopicType) {
-    XMGTopicTypeAll = 1,
-    XMGTopicTypePicture = 10,
-    XMGTopicTypeWord = 29,
-    XMGTopicTypeVoice = 31,
-    XMGTopicTypeVideo = 41
-};
 @interface XMGTopicViewController : UITableViewController
 /** 帖子类型(交给子类去实现) */
 @property (nonatomic, assign) XMGTopicType type;

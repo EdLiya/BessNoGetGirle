@@ -12,6 +12,7 @@
 @implementation XMGTopic
 {
     CGFloat _cellHeight;
+    CGRect _pictureF;
 }
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName {
@@ -79,7 +80,33 @@
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
         
         // cell的高度
-        _cellHeight = XMGTopicCellTextY + textH + XMGTopicCellBottomBarH + 2 * XMGTopicCellMargin + self.height;
+        // 文字部分的高度
+        _cellHeight = XMGTopicCellTextY + textH + XMGTopicCellMargin;
+        
+        // 根据段子的类型来计算cell的高度
+        if (self.type == XMGTopicTypePicture) { // 图片帖子
+            // 图片显示出来的宽度
+            CGFloat pictureW = maxSize.width;
+            // 显示出来的高度
+            CGFloat pictureH = pictureW * self.height / self.width;
+            if (pictureH >= XMGTopicCellPictureMaxH) { // 图片高度过长
+                pictureH = XMGTopicCellPictureBreakH;
+                self.bigPicture = YES; // 大图
+            }
+            
+            // 计算图片控件的frame
+            CGFloat pictureX = XMGTopicCellMargin;
+            CGFloat pictureY = XMGTopicCellTextY + textH + XMGTopicCellMargin;
+            _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+            
+            _cellHeight += pictureH + XMGTopicCellMargin;
+        } else if (self.type == XMGTopicTypeVoice) { // 声音帖子
+            
+        }
+        
+        // 加上底部工具条的高度
+        _cellHeight += XMGTopicCellBottomBarH;
+        _cellHeight += XMGTopicCellMargin; // 加上高度补全, (在cell的setFrame里, 高度-10 的补全)
     }
     return _cellHeight;
 }
