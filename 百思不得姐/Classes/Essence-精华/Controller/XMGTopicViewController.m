@@ -114,7 +114,19 @@ static NSString * const XMGTopicCellId = @"topic";
     params[@"maxtime"] = self.maxtime;
     self.params = params;
     
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+//    [mgr GET:(nonnull NSString *) parameters:<#(nullable id)#> progress:^(NSProgress * _Nonnull downloadProgress) {
+//        <#code#>
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        <#code#>
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        <#code#>
+//    }];
+    
+    
+    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+        ZSLog(@"%f ",downloadProgress.fractionCompleted);
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         if (self.params != params) return;
         // 存储maxtime
