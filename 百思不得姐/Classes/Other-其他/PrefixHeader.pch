@@ -43,8 +43,10 @@
 // ---------------------------------------------------------------------------------------------- 代码宏
 #define WEAKSELF __block typeof(self) __weak weakSelf = self;
 
-
-
+#define SCREEN_WIDTH   [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT  [UIScreen mainScreen].bounds.size.height
+#define XMGScreenW [UIScreen mainScreen].bounds.size.width
+#define XMGScreenH [UIScreen mainScreen].bounds.size.height
 
 
 

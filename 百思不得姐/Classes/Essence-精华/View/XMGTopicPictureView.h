@@ -10,7 +10,7 @@
 
 @class XMGTopic;
 @interface XMGTopicPictureView : UIView
-+ (UIView *)pictureView;
++ (instancetype)pictureView;
 
 /** 帖子数据 */
 @property (nonatomic, strong) XMGTopic *topic;

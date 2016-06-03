@@ -43,9 +43,14 @@
 		D77954611CD9C69E0054448C /* XMGRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D77954601CD9C69E0054448C /* XMGRecommendCategory.m */; };
 		D77F423A1CE05FF7003F5F50 /* XMGLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77F42381CE05FF7003F5F50 /* XMGLoginRegisterViewController.m */; };
 		D77F423B1CE05FF7003F5F50 /* XMGLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D77F42391CE05FF7003F5F50 /* XMGLoginRegisterViewController.xib */; };
+		D7832A4D1D01673200C9859A /* XMGPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7832A4B1D01673200C9859A /* XMGPublishViewController.m */; };
+		D7832A4E1D01673200C9859A /* XMGPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7832A4C1D01673200C9859A /* XMGPublishViewController.xib */; };
 		D783EB601CE46AE2009F04FB /* XMGTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = D783EB5F1CE46AE2009F04FB /* XMGTopic.m */; };
 		D783EB631CE48416009F04FB /* XMGConst.m in Sources */ = {isa = PBXBuildFile; fileRef = D783EB621CE48416009F04FB /* XMGConst.m */; };
 		D7D60BDA1CF8498200B02C41 /* XMGTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D60BD91CF8498200B02C41 /* XMGTopicViewController.m */; };
+		D7DAF1F61D002BE3006E456F /* XMGShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DAF1F41D002BE3006E456F /* XMGShowPictureViewController.m */; };
+		D7DAF1F71D002BE3006E456F /* XMGShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7DAF1F51D002BE3006E456F /* XMGShowPictureViewController.xib */; };
+		D7DAF1FA1D0033DF006E456F /* XMGProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DAF1F91D0033DF006E456F /* XMGProgressView.m */; };
 		D7E6C3271CE30DF000A6E200 /* XMGVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E6C3261CE30DF000A6E200 /* XMGVerticalButton.m */; };
 		D7E6C32A1CE3208200A6E200 /* XMGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E6C3291CE3208200A6E200 /* XMGTextField.m */; };
 		D7E6C32D1CE34CC600A6E200 /* XMGPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E6C32C1CE34CC600A6E200 /* XMGPushGuideView.m */; };
@@ -136,12 +141,20 @@
 		D77F42371CE05FF7003F5F50 /* XMGLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGLoginRegisterViewController.h; sourceTree = "<group>"; };
 		D77F42381CE05FF7003F5F50 /* XMGLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGLoginRegisterViewController.m; sourceTree = "<group>"; };
 		D77F42391CE05FF7003F5F50 /* XMGLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		D7832A4A1D01673200C9859A /* XMGPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPublishViewController.h; sourceTree = "<group>"; };
+		D7832A4B1D01673200C9859A /* XMGPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPublishViewController.m; sourceTree = "<group>"; };
+		D7832A4C1D01673200C9859A /* XMGPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGPublishViewController.xib; sourceTree = "<group>"; };
 		D783EB5E1CE46AE2009F04FB /* XMGTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopic.h; sourceTree = "<group>"; };
 		D783EB5F1CE46AE2009F04FB /* XMGTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopic.m; sourceTree = "<group>"; };
 		D783EB611CE48416009F04FB /* XMGConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGConst.h; sourceTree = "<group>"; };
 		D783EB621CE48416009F04FB /* XMGConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGConst.m; sourceTree = "<group>"; };
 		D7D60BD81CF8498200B02C41 /* XMGTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicViewController.h; sourceTree = "<group>"; };
 		D7D60BD91CF8498200B02C41 /* XMGTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicViewController.m; sourceTree = "<group>"; };
+		D7DAF1F31D002BE3006E456F /* XMGShowPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGShowPictureViewController.h; sourceTree = "<group>"; };
+		D7DAF1F41D002BE3006E456F /* XMGShowPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGShowPictureViewController.m; sourceTree = "<group>"; };
+		D7DAF1F51D002BE3006E456F /* XMGShowPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGShowPictureViewController.xib; sourceTree = "<group>"; };
+		D7DAF1F81D0033DF006E456F /* XMGProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGProgressView.h; sourceTree = "<group>"; };
+		D7DAF1F91D0033DF006E456F /* XMGProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGProgressView.m; sourceTree = "<group>"; };
 		D7E6C3251CE30DF000A6E200 /* XMGVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGVerticalButton.h; sourceTree = "<group>"; };
 		D7E6C3261CE30DF000A6E200 /* XMGVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGVerticalButton.m; sourceTree = "<group>"; };
 		D7E6C3281CE3208200A6E200 /* XMGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTextField.h; sourceTree = "<group>"; };
@@ -284,6 +297,9 @@
 				D7723C401CDB5D4B0048344C /* XMGRecommendTagsViewController.m */,
 				D7D60BD81CF8498200B02C41 /* XMGTopicViewController.h */,
 				D7D60BD91CF8498200B02C41 /* XMGTopicViewController.m */,
+				D7DAF1F31D002BE3006E456F /* XMGShowPictureViewController.h */,
+				D7DAF1F41D002BE3006E456F /* XMGShowPictureViewController.m */,
+				D7DAF1F51D002BE3006E456F /* XMGShowPictureViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -311,6 +327,8 @@
 				D758514A1CFC2D8D00CCF487 /* XMGTopicPictureView.h */,
 				D758514B1CFC2D8D00CCF487 /* XMGTopicPictureView.m */,
 				D758514F1CFC2DE700CCF487 /* XMGTopicPictureView.xib */,
+				D7DAF1F81D0033DF006E456F /* XMGProgressView.h */,
+				D7DAF1F91D0033DF006E456F /* XMGProgressView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -473,6 +491,9 @@
 				D73A15CC1CD8B614008AAC70 /* XMGTabBarController.m */,
 				D73A15DD1CD8CF76008AAC70 /* XMGNavigationController.h */,
 				D73A15DE1CD8CF76008AAC70 /* XMGNavigationController.m */,
+				D7832A4A1D01673200C9859A /* XMGPublishViewController.h */,
+				D7832A4B1D01673200C9859A /* XMGPublishViewController.m */,
+				D7832A4C1D01673200C9859A /* XMGPublishViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -606,6 +627,7 @@
 				D75851501CFC2DE700CCF487 /* XMGTopicPictureView.xib in Resources */,
 				D72A81A81CD9DFA00086DF3D /* XMGRecommendUserCell.xib in Resources */,
 				D707C5BD1CD1EB70009825E2 /* Assets.xcassets in Resources */,
+				D7832A4E1D01673200C9859A /* XMGPublishViewController.xib in Resources */,
 				D7E6C32F1CE34CE100A6E200 /* XMGPushGuideView.xib in Resources */,
 				D7723C491CDB613A0048344C /* XMGRecommendTagCell.xib in Resources */,
 				D72A81A31CD9C9690086DF3D /* XMGRecommendCategoryCell.xib in Resources */,
@@ -613,6 +635,7 @@
 				D779545C1CD99B600054448C /* XMGRecommendViewController.xib in Resources */,
 				D77954571CD9907F0054448C /* XMGFriendTrendsViewController.xib in Resources */,
 				D7165DCB1CE57A0A009030DB /* XMGTopicCell.xib in Resources */,
+				D7DAF1F71D002BE3006E456F /* XMGShowPictureViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,10 +711,12 @@
 				D72A81AB1CD9E31A0086DF3D /* XMGRecommendUser.m in Sources */,
 				D7E6C32A1CE3208200A6E200 /* XMGTextField.m in Sources */,
 				D73A15DC1CD8B614008AAC70 /* XMGTabBar.m in Sources */,
+				D7DAF1F61D002BE3006E456F /* XMGShowPictureViewController.m in Sources */,
 				D783EB631CE48416009F04FB /* XMGConst.m in Sources */,
 				D7723C411CDB5D4B0048344C /* XMGRecommendTagsViewController.m in Sources */,
 				D7D60BDA1CF8498200B02C41 /* XMGTopicViewController.m in Sources */,
 				D77954611CD9C69E0054448C /* XMGRecommendCategory.m in Sources */,
+				D7DAF1FA1D0033DF006E456F /* XMGProgressView.m in Sources */,
 				D73A15DF1CD8CF76008AAC70 /* XMGNavigationController.m in Sources */,
 				D783EB601CE46AE2009F04FB /* XMGTopic.m in Sources */,
 				D72739641CEEEEEA002E31D0 /* NSDate+XMGExtension.m in Sources */,
@@ -713,6 +738,7 @@
 				D73A15D41CD8B614008AAC70 /* XMGFriendTrendsViewController.m in Sources */,
 				D73A15D71CD8B614008AAC70 /* AppDelegate.m in Sources */,
 				D779545E1CD9A3BA0054448C /* Foundation+Log.m in Sources */,
+				D7832A4D1D01673200C9859A /* XMGPublishViewController.m in Sources */,
 				D73A15DB1CD8B614008AAC70 /* main.m in Sources */,
 				D73A15D81CD8B614008AAC70 /* UIBarButtonItem+XMGExtension.m in Sources */,
 			);
