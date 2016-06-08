@@ -8,6 +8,7 @@
 
 #import "XMGTabBar.h"
 #import "XMGPublishViewController.h"
+#import "XMGPublishView.h"
 
 @interface XMGTabBar()
 /** 发布按钮 */
@@ -35,8 +36,10 @@
 
 - (void)publishClick
 {
-    XMGPublishViewController *publish = [[XMGPublishViewController alloc] init];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publish animated:NO completion:nil];
+//    XMGPublishViewController *publish = [[XMGPublishViewController alloc] init];
+//    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publish animated:NO completion:nil];
+    
+    [XMGPublishView show];
 }
 
 - (void)layoutSubviews

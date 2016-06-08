@@ -40,7 +40,6 @@ static CGFloat const XMGSpringFactor = 10;
     CGFloat xMargin = (XMGScreenW - 2 * buttonStartX - maxCols * buttonW) / (maxCols - 1);
     for (int i = 0; i<images.count; i++) {
         XMGVerticalButton *button = [[XMGVerticalButton alloc] init];
-        button.backgroundColor = ZSRandomColor;
         [self.view addSubview:button];
         // 设置内容
         button.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -72,15 +71,13 @@ static CGFloat const XMGSpringFactor = 10;
 
     // 添加标语
     UIImageView *sloganView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"app_slogan"]];
-//    sloganView.y = SCREEN_HEIGHT * 0.2;
-//    sloganView.centerX = SCREEN_WIDTH * 0.5;
     [self.view addSubview:sloganView];
     
     // 标语动画
     POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
     CGFloat centerX = SCREEN_WIDTH * 0.5;
     CGFloat centerEndY = SCREEN_HEIGHT * 0.2;
-    CGFloat centerBeginY = centerEndY - SCREEN_HEIGHT;
+    CGFloat centerBeginY = centerEndY - SCREEN_HEIGHT; 
     anim.fromValue = [NSValue valueWithCGPoint:CGPointMake(centerX, centerBeginY)];
     anim.toValue = [NSValue valueWithCGPoint:CGPointMake(centerX, centerEndY)];
     anim.beginTime = CACurrentMediaTime() + images.count * XMGAnimationDelay;
@@ -95,6 +92,7 @@ static CGFloat const XMGSpringFactor = 10;
 }
 
 - (IBAction)cancel {
+    
     [self dismissViewControllerAnimated:NO completion:nil];
 }
 
