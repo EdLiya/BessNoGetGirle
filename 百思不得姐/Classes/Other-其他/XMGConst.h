@@ -27,3 +27,4 @@ UIKIT_EXTERN CGFloat const XMGTopicCellBottomBarH;
 UIKIT_EXTERN CGFloat const XMGTopicCellPictureMaxH;
 /** 精华-cell-图片帖子一旦超过最大高度,就是用Break */
 UIKIT_EXTERN CGFloat const XMGTopicCellPictureBreakH;
+
