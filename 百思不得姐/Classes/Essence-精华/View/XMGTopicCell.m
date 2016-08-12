@@ -10,6 +10,9 @@
 #import "XMGTopic.h"
 #import <UIImageView+WebCache.h>
 #import "XMGTopicPictureView.h"
+#import "XMGTopicVoiceView.h"
+
+
 
 @interface XMGTopicCell ()
 /** 头像 */
@@ -30,8 +33,13 @@
 @property (weak, nonatomic) IBOutlet UIImageView *sinaVView;
 /** 帖子的文字内容 */
 @property (weak, nonatomic) IBOutlet UILabel *text_label;
+
 /** 图片帖子中间的内容 */
 @property (nonatomic, weak) XMGTopicPictureView *pictureView;
+
+/** 声音帖子中间的内容 */
+@property (nonatomic, weak) XMGTopicVoiceView *voiceView;
+
 @end
 
 @implementation XMGTopicCell
@@ -42,6 +50,16 @@
         _pictureView = pictureView;
     }
     return _pictureView;
+}
+
+- (XMGTopicVoiceView *)voiceView
+{
+    if (!_voiceView) {
+        XMGTopicVoiceView *voiceView = [XMGTopicVoiceView voiceView];
+        [self.contentView addSubview:voiceView];
+        _voiceView = voiceView;
+    }
+    return _voiceView;
 }
 
 - (void)awakeFromNib {

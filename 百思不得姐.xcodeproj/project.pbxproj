@@ -57,6 +57,8 @@
 		D7E6C32A1CE3208200A6E200 /* XMGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E6C3291CE3208200A6E200 /* XMGTextField.m */; };
 		D7E6C32D1CE34CC600A6E200 /* XMGPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E6C32C1CE34CC600A6E200 /* XMGPushGuideView.m */; };
 		D7E6C32F1CE34CE100A6E200 /* XMGPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7E6C32E1CE34CE100A6E200 /* XMGPushGuideView.xib */; };
+		D7F47A2E1D5DB85100FAACB8 /* XMGTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7F47A2D1D5DB85100FAACB8 /* XMGTopicVoiceView.m */; };
+		D7F47A301D5DB86D00FAACB8 /* XMGTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7F47A2F1D5DB86D00FAACB8 /* XMGTopicVoiceView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +169,9 @@
 		D7E6C32B1CE34CC600A6E200 /* XMGPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPushGuideView.h; sourceTree = "<group>"; };
 		D7E6C32C1CE34CC600A6E200 /* XMGPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPushGuideView.m; sourceTree = "<group>"; };
 		D7E6C32E1CE34CE100A6E200 /* XMGPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGPushGuideView.xib; sourceTree = "<group>"; };
+		D7F47A2C1D5DB85100FAACB8 /* XMGTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicVoiceView.h; sourceTree = "<group>"; };
+		D7F47A2D1D5DB85100FAACB8 /* XMGTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicVoiceView.m; sourceTree = "<group>"; };
+		D7F47A2F1D5DB86D00FAACB8 /* XMGTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicVoiceView.xib; sourceTree = "<group>"; };
 		DB2C53BADCC6A307A8334335 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -323,6 +328,9 @@
 		D73A15AF1CD8B614008AAC70 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D7F47A2C1D5DB85100FAACB8 /* XMGTopicVoiceView.h */,
+				D7F47A2D1D5DB85100FAACB8 /* XMGTopicVoiceView.m */,
+				D7F47A2F1D5DB86D00FAACB8 /* XMGTopicVoiceView.xib */,
 				D7723C451CDB613A0048344C /* XMGRecommendTagCell.h */,
 				D7723C461CDB613A0048344C /* XMGRecommendTagCell.m */,
 				D7723C471CDB613A0048344C /* XMGRecommendTagCell.xib */,
@@ -632,6 +640,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7F47A301D5DB86D00FAACB8 /* XMGTopicVoiceView.xib in Resources */,
 				D75851501CFC2DE700CCF487 /* XMGTopicPictureView.xib in Resources */,
 				D72A81A81CD9DFA00086DF3D /* XMGRecommendUserCell.xib in Resources */,
 				D795F8A11D05945300C54171 /* XMGPublishView.xib in Resources */,
@@ -729,6 +738,7 @@
 				D7DAF1FA1D0033DF006E456F /* XMGProgressView.m in Sources */,
 				D73A15DF1CD8CF76008AAC70 /* XMGNavigationController.m in Sources */,
 				D783EB601CE46AE2009F04FB /* XMGTopic.m in Sources */,
+				D7F47A2E1D5DB85100FAACB8 /* XMGTopicVoiceView.m in Sources */,
 				D72739641CEEEEEA002E31D0 /* NSDate+XMGExtension.m in Sources */,
 				D73A15D51CD8B614008AAC70 /* XMGMeViewController.m in Sources */,
 				D77F423A1CE05FF7003F5F50 /* XMGLoginRegisterViewController.m in Sources */,

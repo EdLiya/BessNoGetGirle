@@ -23,15 +23,21 @@ static CGFloat const XMGSpringFactor = 10;
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
 }
 
+// [window_ makeKeyAndVisible]; makeKeyAndVisible 等价于 让当前窗口成为主窗口, 并且hidden = NO
+// window_.windowLevel = UIWindowLevelAlert 窗口有三个级别 UIWindowLevelAlert > UIWindowLevelStatusBar > UIWindowLevelNormal
 
-static UIWindow *window_;
+
+static UIWindow *window_; // 下划线在后面 以表示全局变量, 用于区分下划线在前面的成员变量
+
 + (void)show
 {
+    // 自己新建一个窗口, 以便独立处理上面的事件, 不影响其他视图或者窗口
+    
     // 创建窗口
     window_ = [[UIWindow alloc] init];
     window_.frame = [UIScreen mainScreen].bounds;
     window_.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.8];
-    window_.hidden = NO;
+    window_.hidden = NO; // 这样就可以直接显示出来了
     
     // 添加发布界面
     XMGPublishView *publishView = [XMGPublishView publishView];
