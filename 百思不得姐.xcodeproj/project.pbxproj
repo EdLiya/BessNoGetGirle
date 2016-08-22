@@ -51,6 +51,8 @@
 		D795F8A11D05945300C54171 /* XMGPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D795F89F1D05945300C54171 /* XMGPublishView.xib */; };
 		D7975B6D1D6AE845005D68C0 /* XMGTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7975B6B1D6AE845005D68C0 /* XMGTopicVideoView.m */; };
 		D7975B6E1D6AE845005D68C0 /* XMGTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7975B6C1D6AE845005D68C0 /* XMGTopicVideoView.xib */; };
+		D7975B761D6AF763005D68C0 /* XMGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D7975B731D6AF763005D68C0 /* XMGUser.m */; };
+		D7975B771D6AF763005D68C0 /* XMGComment.m in Sources */ = {isa = PBXBuildFile; fileRef = D7975B751D6AF763005D68C0 /* XMGComment.m */; };
 		D7D60BDA1CF8498200B02C41 /* XMGTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D60BD91CF8498200B02C41 /* XMGTopicViewController.m */; };
 		D7DAF1F61D002BE3006E456F /* XMGShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DAF1F41D002BE3006E456F /* XMGShowPictureViewController.m */; };
 		D7DAF1F71D002BE3006E456F /* XMGShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7DAF1F51D002BE3006E456F /* XMGShowPictureViewController.xib */; };
@@ -160,6 +162,10 @@
 		D7975B6A1D6AE845005D68C0 /* XMGTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicVideoView.h; sourceTree = "<group>"; };
 		D7975B6B1D6AE845005D68C0 /* XMGTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicVideoView.m; sourceTree = "<group>"; };
 		D7975B6C1D6AE845005D68C0 /* XMGTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicVideoView.xib; sourceTree = "<group>"; };
+		D7975B721D6AF763005D68C0 /* XMGUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGUser.h; sourceTree = "<group>"; };
+		D7975B731D6AF763005D68C0 /* XMGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGUser.m; sourceTree = "<group>"; };
+		D7975B741D6AF763005D68C0 /* XMGComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGComment.h; sourceTree = "<group>"; };
+		D7975B751D6AF763005D68C0 /* XMGComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGComment.m; sourceTree = "<group>"; };
 		D7D60BD81CF8498200B02C41 /* XMGTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicViewController.h; sourceTree = "<group>"; };
 		D7D60BD91CF8498200B02C41 /* XMGTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicViewController.m; sourceTree = "<group>"; };
 		D7DAF1F31D002BE3006E456F /* XMGShowPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGShowPictureViewController.h; sourceTree = "<group>"; };
@@ -326,6 +332,10 @@
 				D7723C431CDB5F3C0048344C /* XMGRecommendTag.m */,
 				D783EB5E1CE46AE2009F04FB /* XMGTopic.h */,
 				D783EB5F1CE46AE2009F04FB /* XMGTopic.m */,
+				D7975B721D6AF763005D68C0 /* XMGUser.h */,
+				D7975B731D6AF763005D68C0 /* XMGUser.m */,
+				D7975B741D6AF763005D68C0 /* XMGComment.h */,
+				D7975B751D6AF763005D68C0 /* XMGComment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -737,6 +747,7 @@
 			files = (
 				D72A81AB1CD9E31A0086DF3D /* XMGRecommendUser.m in Sources */,
 				D7E6C32A1CE3208200A6E200 /* XMGTextField.m in Sources */,
+				D7975B771D6AF763005D68C0 /* XMGComment.m in Sources */,
 				D73A15DC1CD8B614008AAC70 /* XMGTabBar.m in Sources */,
 				D7DAF1F61D002BE3006E456F /* XMGShowPictureViewController.m in Sources */,
 				D783EB631CE48416009F04FB /* XMGConst.m in Sources */,
@@ -744,6 +755,7 @@
 				D7D60BDA1CF8498200B02C41 /* XMGTopicViewController.m in Sources */,
 				D795F8A01D05945300C54171 /* XMGPublishView.m in Sources */,
 				D77954611CD9C69E0054448C /* XMGRecommendCategory.m in Sources */,
+				D7975B761D6AF763005D68C0 /* XMGUser.m in Sources */,
 				D7DAF1FA1D0033DF006E456F /* XMGProgressView.m in Sources */,
 				D73A15DF1CD8CF76008AAC70 /* XMGNavigationController.m in Sources */,
 				D783EB601CE46AE2009F04FB /* XMGTopic.m in Sources */,

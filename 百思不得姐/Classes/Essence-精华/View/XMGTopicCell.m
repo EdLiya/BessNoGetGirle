@@ -12,7 +12,8 @@
 #import "XMGTopicPictureView.h"
 #import "XMGTopicVoiceView.h"
 #import "XMGTopicVideoView.h"
-
+#import "XMGComment.h"
+#import "XMGUser.h"
 
 @interface XMGTopicCell ()
 /** 头像 */
@@ -42,6 +43,11 @@
 
 /** 视频帖子中间的内容 */
 @property (nonatomic, weak) XMGTopicVideoView *videoView;
+
+/** 最热评论的内容 */
+@property (weak, nonatomic) IBOutlet UILabel *topCmtContentLabel;
+/** 最热评论的整体 */
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
 @end
 
 @implementation XMGTopicCell
@@ -151,6 +157,16 @@
         self.videoView.hidden = YES;
         self.voiceView.hidden = YES;
         self.pictureView.hidden = YES;
+    }
+    
+    // 处理最热评论
+    XMGComment *cmt = [topic.top_cmt firstObject];
+    if (cmt) {
+        self.topCmtView.hidden = NO;
+        self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@", cmt.user.username, cmt.content];
+        
+    } else {
+        self.topCmtView.hidden = YES;
     }
 }
 

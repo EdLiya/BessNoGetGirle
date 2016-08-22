@@ -28,3 +28,10 @@ UIKIT_EXTERN CGFloat const XMGTopicCellPictureMaxH;
 /** 精华-cell-图片帖子一旦超过最大高度,就是用Break */
 UIKIT_EXTERN CGFloat const XMGTopicCellPictureBreakH;
 
+
+/** XMGUser模型-性别属性值 */
+UIKIT_EXTERN NSString * const XMGUserSexMale;
+UIKIT_EXTERN NSString * const XMGUserSexFemale;
+
+/** 精华-cell-最热评论标题的高度 */
+UIKIT_EXTERN CGFloat const XMGTopicCellTopCmtTitleH;
