@@ -1,31 +1,28 @@
 //
-//  XMGTopicVoiceView.m
-//  百思不得姐
+//  XMGTopicVideoView.m
+//  01-百思不得姐
 //
-//  Created by dev on 16/8/12.
-//  Copyright © 2016年 dev. All rights reserved.
+//  Created by xiaomage on 15/7/30.
+//  Copyright (c) 2015年 小码哥. All rights reserved.
 //
 
-#import "XMGTopicVoiceView.h"
+#import "XMGTopicVideoView.h"
 #import "XMGTopic.h"
 #import <UIImageView+WebCache.h>
 #import "XMGShowPictureViewController.h"
 
-
-@interface XMGTopicVoiceView()
+@interface XMGTopicVideoView()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UILabel *voicelengthLabel;
 @property (weak, nonatomic) IBOutlet UILabel *playcountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *videotimeLabel;
 @end
 
+@implementation XMGTopicVideoView
 
-@implementation XMGTopicVoiceView
-
-+ (instancetype)voiceView
++ (instancetype)videoView
 {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
 }
-
 
 - (void)awakeFromNib
 {
@@ -54,9 +51,8 @@
     self.playcountLabel.text = [NSString stringWithFormat:@"%zd播放", topic.playcount];
     
     // 时长
-    NSInteger minute = topic.voicetime / 60;
-    NSInteger second = topic.voicetime % 60;
-    self.voicelengthLabel.text = [NSString stringWithFormat:@"%02zd:%02zd", minute, second];
+    NSInteger minute = topic.videotime / 60;
+    NSInteger second = topic.videotime % 60;
+    self.videotimeLabel.text = [NSString stringWithFormat:@"%02zd:%02zd", minute, second];
 }
-
 @end

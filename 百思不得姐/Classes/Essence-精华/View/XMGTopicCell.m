@@ -11,7 +11,7 @@
 #import <UIImageView+WebCache.h>
 #import "XMGTopicPictureView.h"
 #import "XMGTopicVoiceView.h"
-
+#import "XMGTopicVideoView.h"
 
 
 @interface XMGTopicCell ()
@@ -40,6 +40,8 @@
 /** 声音帖子中间的内容 */
 @property (nonatomic, weak) XMGTopicVoiceView *voiceView;
 
+/** 视频帖子中间的内容 */
+@property (nonatomic, weak) XMGTopicVideoView *videoView;
 @end
 
 @implementation XMGTopicCell
@@ -60,6 +62,16 @@
         _voiceView = voiceView;
     }
     return _voiceView;
+}
+
+- (XMGTopicVideoView *)videoView
+{
+    if (!_videoView) {
+        XMGTopicVideoView *videoView = [XMGTopicVideoView videoView];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
 }
 
 - (void)awakeFromNib {
@@ -113,13 +125,32 @@
     // 设置帖子的文字内容
     self.text_label.text = topic.text;
     
-    // 根据模型类型(帖子类型)添加对应的内容到cell的中间
+    // 根据模型类型(帖子类型)添加对应的内容到cell的中间  ( 要考虑cell的循环利用的影响 )
     if (topic.type == XMGTopicTypePicture) { // 图片帖子
+        self.pictureView.hidden = NO;
         self.pictureView.topic = topic;
         self.pictureView.frame = topic.pictureF;
+        
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
     } else if (topic.type == XMGTopicTypeVoice) { // 声音帖子
-        //        self.voiceView.topic = topic;
-        //        self.voiceView.frame = topic.voiceF;
+        self.voiceView.hidden = NO;
+        self.voiceView.topic = topic;
+        self.voiceView.frame = topic.voiceF;
+        
+        self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
+    } else if (topic.type == XMGTopicTypeVideo) {
+         self.videoView.hidden = NO;
+        self.videoView.topic = topic;
+        self.videoView.frame = topic.videoF;
+        
+        self.voiceView.hidden = YES;
+        self.pictureView.hidden = YES;
+    } else { // 段子帖子
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.pictureView.hidden = YES;
     }
 }
 

@@ -93,7 +93,7 @@
                 pictureH = XMGTopicCellPictureBreakH;
                 self.bigPicture = YES; // 大图
             }
-            
+             
             // 计算图片控件的frame
             CGFloat pictureX = XMGTopicCellMargin;
             CGFloat pictureY = XMGTopicCellTextY + textH + XMGTopicCellMargin;
@@ -108,6 +108,14 @@
             _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
             
             _cellHeight += voiceH + XMGTopicCellMargin;
+        } else if (self.type == XMGTopicTypeVideo) {
+            CGFloat videoX = XMGTopicCellMargin;
+            CGFloat videoY = XMGTopicCellTextY + textH + XMGTopicCellMargin;
+            CGFloat videoW = maxSize.width;
+            CGFloat videoH = videoW * self.height / self.width;
+            _videoF = CGRectMake(videoX, videoY, videoW, videoH);
+            
+            _cellHeight += videoH + XMGTopicCellMargin;
         }
         
         // 加上底部工具条的高度
