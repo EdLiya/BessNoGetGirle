@@ -13,6 +13,7 @@
 #import <MJExtension.h>
 #import <MJRefresh.h>
 #import "XMGTopicCell.h"
+#import "XMGCommentViewController.h"
 
 @interface XMGTopicViewController ()
 /** 帖子数据 */
@@ -151,6 +152,14 @@ static NSString * const XMGTopicCellId = @"topic";
     cell.topic = self.topics[indexPath.row];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    XMGLogFunc
+    XMGCommentViewController *commentVc = [[XMGCommentViewController alloc] init];
+    commentVc.topic = self.topics[indexPath.row];
+    [self.navigationController pushViewController:commentVc animated:YES];
 }
 
 #pragma mark - 代理方法

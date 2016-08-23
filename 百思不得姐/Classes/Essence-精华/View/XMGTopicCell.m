@@ -51,6 +51,12 @@
 @end
 
 @implementation XMGTopicCell
+
++ (instancetype)cell
+{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
+}
+
 - (XMGTopicPictureView *)pictureView {
     if (!_pictureView) {
         XMGTopicPictureView *pictureView = [XMGTopicPictureView pictureView];
@@ -185,7 +191,9 @@
     
     frame.origin.x = XMGTopicCellMargin;            // cell 位置调整了 10 点
     frame.size.width -= 2 * XMGTopicCellMargin;     // 宽度减了 2*10 点
-    frame.size.height -= XMGTopicCellMargin;        // 高度 减 10点
+//    frame.size.height -= XMGTopicCellMargin;        // 高度 减 10点
+    frame.size.height = self.topic.cellHeight - XMGTopicCellMargin;
+    
     frame.origin.y += XMGTopicCellMargin;           // 整体下移10点
     [super setFrame:frame];
 }

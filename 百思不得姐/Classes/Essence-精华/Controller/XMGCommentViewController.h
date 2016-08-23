@@ -1,20 +1,14 @@
 //
-//  XMGTopicCell.h
+//  XMGCommentViewController.h
 //  百思不得姐
 //
-//  Created by dev on 16/5/13.
+//  Created by dev on 16/8/23.
 //  Copyright © 2016年 dev. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-
 @class XMGTopic;
-
-
-@interface XMGTopicCell : UITableViewCell
-/** 帖子数据 */
+@interface XMGCommentViewController : UIViewController
+/** 帖子模型 */
 @property (nonatomic, strong) XMGTopic *topic;
-
-+ (instancetype)cell;
-
 @end
