@@ -49,6 +49,8 @@
 #define XMGScreenH [UIScreen mainScreen].bounds.size.height
 
 
+#define RootViewController [UIApplication sharedApplication].keyWindow.rootViewController
+
 
 #endif
 #endif /* PrefixHeader_pch */
