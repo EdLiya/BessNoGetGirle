@@ -13,6 +13,8 @@
 #import <AFNetworking.h>
 #import "XMGComment.h"
 #import <MJExtension.h>
+#import "XMGCommentHeaderView.h"
+#import "XMGCommentCell.h"
 //#import "XMGCommentCell.h"
 
 @interface XMGCommentViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -26,6 +28,9 @@
 
 /** 管理者 */
 @property (nonatomic, strong) AFHTTPSessionManager *manager;
+
+/** 保存帖子的top_cmt */
+@property (nonatomic, strong) XMGComment *saved_top_cmt;
 
 @end
 
@@ -96,6 +101,12 @@ static NSString * const XMGCommentId = @"comment";
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    // 恢复帖子的top_cmt
+    if (self.saved_top_cmt) {
+        self.topic.top_cmt = self.saved_top_cmt;
+        [self.topic setValue:@0 forKeyPath:@"cellHeight"];
+    }
 }
 
 - (void)setupBasic
@@ -105,13 +116,28 @@ static NSString * const XMGCommentId = @"comment";
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
+    // cell的高度设置 (以下两者缺一不可, UITableViewAutomaticDimension 是告诉tableview自动计算高度)
+    self.tableView.estimatedRowHeight = 44; // 估算高度
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    // 背景色
     self.tableView.backgroundColor = XMGGlobalBg;
+    
+    // 注册
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XMGCommentCell class]) bundle:nil] forCellReuseIdentifier:XMGCommentId];
 }
 
 - (void)setupHeader
 {
     // 创建header
     UIView *header = [[UIView alloc] init];
+    
+    // 清空top_cmt
+    if (self.topic.top_cmt) {
+        self.saved_top_cmt = self.topic.top_cmt;
+        self.topic.top_cmt = nil;
+        [self.topic setValue:@0 forKeyPath:@"cellHeight"];
+    }
     
     // 添加cell
     XMGTopicCell *cell = [XMGTopicCell cell];
@@ -166,33 +192,48 @@ static NSString * const XMGCommentId = @"comment";
     return latestCount;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//    
+//    NSInteger hotCount = self.hotComments.count;
+//    
+//    if (section == 0) {
+//        return hotCount ? @"最热评论" : @"最新评论";
+//    }
+//    
+//    return @"最新评论";
+//}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    // 先从缓存池中找header
+    XMGCommentHeaderView *header = [XMGCommentHeaderView headerViewWithTableView:tableView];
     
+    // 设置label的数据
     NSInteger hotCount = self.hotComments.count;
-    
     if (section == 0) {
-        return hotCount ? @"最热评论" : @"最新评论";
+        header.title = hotCount ? @"最热评论" : @"最新评论";
+    } else {
+        header.title = @"最新评论";
     }
-    
-    return @"最新评论";
+    return header;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIdentifier = @"cellID";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (nil == cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    }
-
-    cell.textLabel.text = [NSString stringWithFormat:@"%zd : %zd",indexPath.section, indexPath.row];
+//    static NSString *cellIdentifier = @"cellID";
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+//    if (nil == cell) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+//    }
+//
+//    cell.textLabel.text = [NSString stringWithFormat:@"%zd : %zd",indexPath.section, indexPath.row];
+//    
+//    return cell;
+    
+    XMGCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:XMGCommentId];
+    
+    cell.comment = [self commentInIndexPath:indexPath];
     
     return cell;
-    
-//    XMGCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:XMGCommentId];
-    
-//    cell.comment = [self commentInIndexPath:indexPath];
-    
-//    return cell;
 }
 
 - (XMGComment *)commentInIndexPath:(NSIndexPath *)indexPath
