@@ -36,6 +36,9 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGa-9W-mJh" userLabel="评论内容">
                         <rect key="frame" x="55" y="40" width="253" height="72"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="bBe-Jf-e4A"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -58,6 +61,19 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tp-FQ-SI6" userLabel="音频按钮">
+                        <rect key="frame" x="55" y="40" width="62" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="4rz-nO-1o2"/>
+                            <constraint firstAttribute="width" constant="62" id="SZc-cx-E7s"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <inset key="imageEdgeInsets" minX="45" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="12''" image="play-voice-stop" backgroundImage="play-voice-bg">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="highlighted" backgroundImage="play-voice-bg-select"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="mDT-hf-FHt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="6cA-9z-GC6"/>
@@ -67,7 +83,9 @@
                     <constraint firstItem="mhb-Lu-eAF" firstAttribute="leading" secondItem="SGa-9W-mJh" secondAttribute="trailing" id="GO8-v8-ZL8"/>
                     <constraint firstItem="SGa-9W-mJh" firstAttribute="leading" secondItem="mDT-hf-FHt" secondAttribute="trailing" constant="10" id="GxB-UL-POg"/>
                     <constraint firstItem="s7C-nW-nuU" firstAttribute="bottom" secondItem="I5f-cq-NIS" secondAttribute="bottom" id="Jon-GX-zIB"/>
+                    <constraint firstItem="8tp-FQ-SI6" firstAttribute="leading" secondItem="SGa-9W-mJh" secondAttribute="leading" id="MZe-MQ-fPB"/>
                     <constraint firstAttribute="trailing" secondItem="fX7-f7-HYF" secondAttribute="trailing" constant="10" id="PgF-vL-EJk"/>
+                    <constraint firstItem="8tp-FQ-SI6" firstAttribute="top" secondItem="SGa-9W-mJh" secondAttribute="top" id="V3v-xt-jBz"/>
                     <constraint firstItem="mhb-Lu-eAF" firstAttribute="top" secondItem="fX7-f7-HYF" secondAttribute="bottom" constant="10" id="Xkw-SG-hvZ"/>
                     <constraint firstItem="SGa-9W-mJh" firstAttribute="top" secondItem="s7C-nW-nuU" secondAttribute="bottom" constant="10" id="bXq-to-rtr"/>
                     <constraint firstItem="mDT-hf-FHt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="eEY-ZK-nff"/>
@@ -83,12 +101,16 @@
                 <outlet property="profileImageView" destination="mDT-hf-FHt" id="6i3-Sn-VkM"/>
                 <outlet property="sexView" destination="I5f-cq-NIS" id="jas-em-4TF"/>
                 <outlet property="usernameLabel" destination="s7C-nW-nuU" id="JCF-gx-9aG"/>
+                <outlet property="voiceButton" destination="8tp-FQ-SI6" id="J4h-nf-d4f"/>
             </connections>
-            <point key="canvasLocation" x="284" y="332.5"/>
+            <point key="canvasLocation" x="209" y="493.5"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="commentLikeButton" width="18" height="18"/>
         <image name="commentLikeButtonClick" width="19" height="19"/>
+        <image name="play-voice-bg" width="62" height="22"/>
+        <image name="play-voice-bg-select" width="74" height="24"/>
+        <image name="play-voice-stop" width="12" height="12"/>
     </resources>
 </document>

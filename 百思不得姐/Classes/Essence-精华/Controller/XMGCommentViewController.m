@@ -32,6 +32,9 @@
 /** 保存帖子的top_cmt */
 @property (nonatomic, strong) XMGComment *saved_top_cmt;
 
+/** 保存当前的页码 */
+@property (nonatomic, assign) NSInteger page;
+
 @end
 
 static NSString * const XMGCommentId = @"comment";
@@ -68,6 +71,8 @@ static NSString * const XMGCommentId = @"comment";
 
 - (void)loadNewComments {
     
+    // 结束之前的所有请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
@@ -83,10 +88,21 @@ static NSString * const XMGCommentId = @"comment";
         // 最新评论
         self.latestComments = [XMGComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
         
+        // 页码
+        self.page = 1; // 回到第一页数据
+        
         // 刷新数据
         [self.tableView reloadData];
         // 结束刷新
         [self.tableView.mj_header endRefreshing];
+        
+        
+        // 控制footer的状态
+        NSInteger total = [responseObject[@"total"] integerValue];
+        if (self.latestComments.count >= total) { // 全部加载完毕
+            self.tableView.mj_footer.hidden = YES;
+        }
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
         [self.tableView.mj_header endRefreshing];
@@ -95,7 +111,44 @@ static NSString * const XMGCommentId = @"comment";
 }
 
 - (void)loadMoreComments {
+    // 结束之前的所有请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
+    // 页码
+    NSInteger page = self.page + 1;
+    
+    // 参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"dataList";
+    params[@"c"] = @"comment";
+    params[@"data_id"] = self.topic.ID;
+    params[@"page"] = @(page);
+    XMGComment *cmt = [self.latestComments lastObject];
+    params[@"lastcid"] = cmt.ID;
+    
+    
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        // 最新评论
+        NSArray *newComments = [XMGComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        [self.latestComments addObjectsFromArray:newComments];
+        
+        // 页码
+        self.page = page;
+        
+        // 刷新数据
+        [self.tableView reloadData];
+        
+        // 控制footer的状态
+        NSInteger total = [responseObject[@"total"] integerValue];
+        if (self.latestComments.count >= total) { // 全部加载完毕
+            self.tableView.mj_footer.hidden = YES;
+        } else {
+            // 结束刷新状态
+            [self.tableView.mj_footer endRefreshing];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self.tableView.mj_footer endRefreshing];
+    }];
 }
 
 - (void)dealloc
@@ -107,6 +160,10 @@ static NSString * const XMGCommentId = @"comment";
         self.topic.top_cmt = self.saved_top_cmt;
         [self.topic setValue:@0 forKeyPath:@"cellHeight"];
     }
+    
+    // 取消所有任务
+//    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    [self.manager invalidateSessionCancelingTasks:YES];
 }
 
 - (void)setupBasic
@@ -123,8 +180,14 @@ static NSString * const XMGCommentId = @"comment";
     // 背景色
     self.tableView.backgroundColor = XMGGlobalBg;
     
+    // 去掉分隔线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     // 注册
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XMGCommentCell class]) bundle:nil] forCellReuseIdentifier:XMGCommentId];
+    
+    // 内边距
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, XMGTopicCellMargin, 0);
 }
 
 - (void)setupHeader
@@ -182,7 +245,7 @@ static NSString * const XMGCommentId = @"comment";
     NSInteger hotCount = self.hotComments.count;
     NSInteger latestCount = self.latestComments.count;
     
-    // 隐藏尾部控件
+    // 隐藏尾部控件 (没有新数据时)
     tableView.mj_footer.hidden = (latestCount == 0);
     
     if (section == 0) {

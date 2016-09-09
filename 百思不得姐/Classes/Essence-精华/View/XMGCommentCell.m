@@ -18,11 +18,19 @@
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *likeCountLabel;
+@property (weak, nonatomic) IBOutlet UIButton *voiceButton;
 
 @end
 
 
 @implementation XMGCommentCell
+
+- (void)awakeFromNib
+{
+    UIImageView *bgView = [[UIImageView alloc] init];
+    bgView.image = [UIImage imageNamed:@"mainCellBackground"];
+    self.backgroundView = bgView;
+}
 
 - (void)setComment:(XMGComment *)comment {
     _comment = comment;
@@ -33,6 +41,29 @@
     self.usernameLabel.text = comment.user.username;
     self.likeCountLabel.text = [NSString stringWithFormat:@"%zd", comment.like_count];
     
+    if (comment.voiceuri.length) {
+        self.voiceButton.hidden = NO;
+        [self.voiceButton setTitle:[NSString stringWithFormat:@"%zd''", comment.voicetime] forState:UIControlStateNormal];
+    } else {
+        self.voiceButton.hidden = YES;
+    }
+}
+
+//- (void)setFrame:(CGRect)frame {
+//    
+//    frame.origin.x = XMGTopicCellMargin;
+//    
+//    frame.size.width = - 2 * XMGTopicCellMargin;
+//    
+//    [super setFrame:frame];
+//}
+
+- (void)setFrame:(CGRect)frame
+{
+    frame.origin.x = XMGTopicCellMargin;
+    frame.size.width -= 2 * XMGTopicCellMargin;
+    
+    [super setFrame:frame];
 }
 
 @end

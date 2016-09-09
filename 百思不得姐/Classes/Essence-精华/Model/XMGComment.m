@@ -7,7 +7,14 @@
 //
 
 #import "XMGComment.h"
+#import <MJExtension.h>
 
 @implementation XMGComment
+
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
+    
+    return @{@"ID" : @"id"};
+}
 
 @end
