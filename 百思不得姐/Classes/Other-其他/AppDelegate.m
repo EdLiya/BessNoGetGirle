@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "XMGTabBarController.h"
 #import "XMGPushGuideView.h"
+#import "XMGTopWindow.h"
 
 @interface AppDelegate ()
 
@@ -50,6 +51,8 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+//    [XMGTopWindow show]; // 该控件还有未解决的bug
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
