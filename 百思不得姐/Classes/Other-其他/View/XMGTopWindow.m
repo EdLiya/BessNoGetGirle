@@ -49,7 +49,7 @@ static UIWindow *window_;
 //        CGRect newFrame = [[UIApplication sharedApplication].keyWindow convertRect:subview.frame fromView:subview.superview];
         
         // 如果是scrollview, 滚动最顶部
-        if ([subview isKindOfClass:[UIScrollView class]]) {
+        if ([subview isKindOfClass:[UIScrollView class]] && subview.isShowingOnKeyWindow) {
             CGPoint offset = subview.contentOffset;
             offset.y = - subview.contentInset.top;
             [subview setContentOffset:offset animated:YES];
