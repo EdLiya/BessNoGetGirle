@@ -25,6 +25,16 @@
 
 @implementation XMGCommentCell
 
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    return NO;
+}
+
 - (void)awakeFromNib
 {
     UIImageView *bgView = [[UIImageView alloc] init];
@@ -60,8 +70,8 @@
 
 - (void)setFrame:(CGRect)frame
 {
-    frame.origin.x = XMGTopicCellMargin;
-    frame.size.width -= 2 * XMGTopicCellMargin;
+//    frame.origin.x = XMGTopicCellMargin;
+//    frame.size.width -= 2 * XMGTopicCellMargin;
     
     [super setFrame:frame];
 }

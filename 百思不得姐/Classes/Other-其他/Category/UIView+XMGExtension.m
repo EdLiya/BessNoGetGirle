@@ -107,5 +107,7 @@
     BOOL intersects = CGRectIntersectsRect(newFrame, winBounds);
     
     return !self.isHidden && self.alpha > 0.01 && self.window == keyWindow && intersects;
+
 }
+
 @end

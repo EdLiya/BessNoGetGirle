@@ -231,6 +231,12 @@ static NSString * const XMGCommentId = @"comment";
 }
 
 #pragma mark - <UITableView DataSource>
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [self.view endEditing:YES];
+    
+    [[UIMenuController sharedMenuController] setMenuVisible:NO animated:YES];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     NSInteger hotCount = self.hotComments.count;
@@ -282,15 +288,6 @@ static NSString * const XMGCommentId = @"comment";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    static NSString *cellIdentifier = @"cellID";
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-//    if (nil == cell) {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-//    }
-//
-//    cell.textLabel.text = [NSString stringWithFormat:@"%zd : %zd",indexPath.section, indexPath.row];
-//    
-//    return cell;
     
     XMGCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:XMGCommentId];
     
@@ -298,6 +295,30 @@ static NSString * const XMGCommentId = @"comment";
     
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    if (menu.isMenuVisible) {
+        [menu setMenuVisible:NO animated:YES]; // UIMenuController 是依赖于第一响应者而显示的, 当其它cell被取消第一响应者时,UIMenuController 会消失
+    } else {
+        // 被点击的cell
+        XMGCommentCell *cell = (XMGCommentCell *)[tableView cellForRowAtIndexPath:indexPath];
+        // 出现一个第一响应者
+        [cell becomeFirstResponder];
+        
+        // 显示MenuController
+        UIMenuItem *ding = [[UIMenuItem alloc] initWithTitle:@"顶" action:@selector(ding:)];
+        UIMenuItem *replay = [[UIMenuItem alloc] initWithTitle:@"回复" action:@selector(replay:)];
+        UIMenuItem *report = [[UIMenuItem alloc] initWithTitle:@"举报" action:@selector(report:)];
+        menu.menuItems = @[ding, replay, report];
+        CGRect rect = CGRectMake(0, cell.height * 0.5, cell.width, cell.height * 0.5);
+        [menu setTargetRect:rect inView:cell];
+        [menu setMenuVisible:YES animated:YES];
+    }
+}
+
+
 
 - (XMGComment *)commentInIndexPath:(NSIndexPath *)indexPath
 {
@@ -315,9 +336,23 @@ static NSString * const XMGCommentId = @"comment";
     return self.latestComments;
 }
 
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+
+#pragma mark - MenuItem处理
+- (void)ding:(UIMenuController *)menu
 {
-    [self.view endEditing:YES];
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    NSLog(@"%s %@", __func__, [self commentInIndexPath:indexPath].content);
 }
 
+- (void)replay:(UIMenuController *)menu
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    NSLog(@"%s %@", __func__, [self commentInIndexPath:indexPath].content);
+}
+
+- (void)report:(UIMenuController *)menu
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    NSLog(@"%s %@", __func__, [self commentInIndexPath:indexPath].content);
+}
 @end

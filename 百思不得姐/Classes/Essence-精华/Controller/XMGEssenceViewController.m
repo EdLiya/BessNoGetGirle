@@ -35,6 +35,8 @@
     [self setupTitlesView];
     // 底部的scrollView
     [self setupContentView];
+    
+    
 }
 
 /**
